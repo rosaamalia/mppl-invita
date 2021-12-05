@@ -10,49 +10,73 @@
             <div class="row">
               <a class="nav-link text-white" aria-current="page" href="/">Home</a>
             </div>
+
+            @if (Route::currentRouteName() == 'index') 
             <div class="row">
               <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
             </div>
+            @endif
+
           </li>
           <li class="nav-item pe-lg-5 pe-sm-2 pe-3 order">
             <div class="row">
               <a class="nav-link text-white order" href="#order">Order</a>
             </div>
-            <!-- <div class="row">
-                <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
-              </div> -->
+
+            @if (Route::currentRouteName() == 'order') 
+            <div class="row">
+              <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
+            </div>
+            @endif
+
           </li>
           <li class="nav-item pe-lg-5 pe-sm-2 pe-3 portfolio">
             <div class="row">
               <a class="nav-link text-white portfolio" href="/portfolio">Portfolio</a>
             </div>
-            <!-- <div class="row">
+
+            @if (Route::currentRouteName() == 'portfolio')
+            <div class="row">
                 <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
-              </div> -->
+              </div>
+            @endif
+
           </li>
           <li class="nav-item pe-lg-5 pe-sm-2 pe-3 blog">
             <div class="row">
               <a class="nav-link text-white blog" href="#blog">Blog</a>
             </div>
-            <!-- <div class="row">
+            
+            @if (Route::currentRouteName() == 'blog') 
+            <div class="row">
               <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
-          </div> -->
+            </div>
+            @endif
+
           </li>
           <li class="nav-item pe-lg-5 pe-sm-2 pe-3 review">
             <div class="row">
               <a class="nav-link text-white review" href="#review">Review</a>
             </div>
-            <!-- <div class="row">
-                  <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
-              </div> -->
+
+            @if (Route::currentRouteName() == 'review') 
+            <div class="row">
+              <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
+            </div>
+            @endif
+
           </li>
           <li class="nav-item pe-lg-5 pe-sm-2 pe-3 faq">
             <div class="row">
               <a class="nav-link text-white faq" href="#faq">FAQ</a>
             </div>
-            <!-- <div class="row">
-                <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
-              </div> -->
+
+            @if (Route::currentRouteName() == 'faq') 
+            <div class="row">
+              <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
+            </div>
+            @endif
+
           </li>
           <!-- <div class="container animation start-home position-absolute"></div> -->
         </ul>

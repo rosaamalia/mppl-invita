@@ -13,18 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as' => 'index', function () {
     return view('index');
-});
+}]);
 
-Route::get('/portfolio', function () {
+Route::get('/portfolio', ['as' => 'portfolio', function () {
     return view('portfolio');
-});
+}]);
 
-Route::get('/daftar', function () {
+Route::get('/daftar', ['as' => 'daftar', function () {
     return view('daftar');
-});
+}]);
 
-Route::get('/masuk', function () {
+Route::get('/masuk', ['as' => 'masuk', function () {
     return view('login');
-});
+}]);
