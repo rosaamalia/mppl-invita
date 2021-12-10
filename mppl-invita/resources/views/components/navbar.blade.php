@@ -71,7 +71,7 @@
               <a class="nav-link text-white faq" href="#faq">FAQ</a>
             </div>
 
-            @if (Route::currentRouteName() == 'faq') 
+            @if (Route::currentRouteName() == 'faq')
             <div class="row">
               <div class="line" style="background-color: white; width: 100%; height: 5px; border-radius: 8px"></div>
             </div>
