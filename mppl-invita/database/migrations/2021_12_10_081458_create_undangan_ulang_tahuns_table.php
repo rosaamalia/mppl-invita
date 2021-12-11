@@ -14,8 +14,8 @@ class CreateUndanganUlangTahunsTable extends Migration
     public function up()
     {
         Schema::create('undangan_ulang_tahuns', function (Blueprint $table) {
-            $table->bigIncrements('id_undangan_ulangtahun');
-            $table->foreignId('id_undangan')->references('id_undangan')->on('undangans');
+            $table->id();
+            $table->foreignId('id_undangan')->references('id')->on('undangans');
             $table->char('honorific_ulangtahun', 5);
             $table->date('tanggal_lahir_ulangtahun');
             $table->text('deskripsi_ulangtahun')->nullable();

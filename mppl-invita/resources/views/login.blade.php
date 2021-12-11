@@ -50,23 +50,55 @@
             <div class="row mt-3">
               <div class="col-12 fs-2" style="color: rgb(255, 255, 255)"><p>atau</p></div>
             </div>
-            <div class="row justify-content-center mt-3">
-              <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
-                <input type="email" class="form-control text-start text-black fs-3 w-100 border-0" style="padding-left: 60px; color: #ccc; border-radius: 10px" placeholder="Email" />
-                <i class="icon-form bi bi-envelope-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+
+            @if(session()->has('sukses'))
+            <div class="row justify-content-center">
+              <div class="alert alert-primary alert-dismissible fade show col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 fs-3" role="alert">
+                {{ session('sukses') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             </div>
-            <div class="row justify-content-center mt-4">
-              <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
-                <input type="password" id="pass" name="password" class="form-control text-start text-black fs-3 w-100 border-0" placeholder="Kata Sandi" style="padding-left: 60px; color: #ccc; border-radius: 10px" />
-                <i class="icon-form bi bi-key-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+            @endif
+
+            @if(session()->has('gagal'))
+            <div class="row justify-content-center">
+              <div class="alert alert-danger alert-dismissible fade show col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 fs-3" role="alert">
+                {{ session('gagal') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             </div>
-            <div class="row justify-content-center mt-5 pt-3">
-              <div class="col-12" style="border-radius: 10px">
-                <button type="button" class="btn text-center text-white fw-normal ps-4 pe-4 fs-3 pt-2 pb-2" style="background-color: #044581">Masuk</button>
+            @endif
+
+            <form action="/masuk" method="post">
+              @csrf
+              <div class="row justify-content-center mt-3">
+                <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
+                  <input type="email" id="email" name="email" class="form-control text-start text-black fs-3 w-100 border-0 @error('email') is-invalid @enderror" style="padding-left: 60px; color: #ccc; border-radius: 10px" placeholder="Email" value="{{ old('email') }}" autofocus/>
+                  <i class="icon-form bi bi-envelope-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+                  @error('email')
+                  <div class="invalid-feedback text-start fs-5 w-100" style="padding-left: 60px;">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>
               </div>
-            </div>
+              <div class="row justify-content-center mt-4">
+                <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
+                  <input type="password" id="password" name="password" class="form-control text-start text-black fs-3 w-100 border-0 @error('password') is-invalid @enderror" placeholder="Kata Sandi" style="padding-left: 60px; color: #ccc; border-radius: 10px" />
+                  <i class="icon-form bi bi-key-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+                  @error('password')
+                  <div class="invalid-feedback text-start fs-5 w-100" style="padding-left: 60px;">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>
+              </div>
+              <div class="row justify-content-center mt-5 pt-3">
+                <div class="col-12" style="border-radius: 10px">
+                  <button type="submit" class="btn text-center text-white fw-normal ps-4 pe-4 fs-3 pt-2 pb-2" style="background-color: #044581">Masuk</button>
+                </div>
+              </div>
+            </form>
             <div class="row justify-content-center mt-5 pt-3">
               <div class="col-12" style="">
                 <a href="#" class="text-decoration-none fw-bold fs-2" style="color: #044581">Lupa Kata Sandi</a>

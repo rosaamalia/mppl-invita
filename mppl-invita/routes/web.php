@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\OrderController;
+use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,18 +17,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', ['as' => 'index', function () {
+Route::get('/', [function () {
     return view('index');
 }]);
 
-Route::get('/portfolio', ['as' => 'portfolio', function () {
+Route::get('/portfolio', [function () {
     return view('portfolio');
-}]);
+}])->name('portfolio');
 
-Route::get('/daftar', ['as' => 'daftar', function () {
-    return view('daftar');
-}]);
+Route::get('/daftar', [RegisterController::class, 'index'])->middleware('guest')->name('daftar');
+Route::post('/daftar', [RegisterController::class, 'daftar']);
 
-Route::get('/masuk', ['as' => 'masuk', function () {
-    return view('login');
-}]);
+Route::get('/masuk', [LoginController::class, 'index'])->middleware('guest')->name('masuk');
+Route::post('/masuk', [LoginController::class, 'masuk']);
+Route::post('/keluar', [LoginController::class, 'keluar']);
+
+Route::get('/order', [OrderController::class, 'index'])->middleware('auth')->name('order');

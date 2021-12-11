@@ -14,7 +14,7 @@ class CreateJenisUndangansTable extends Migration
     public function up()
     {
         Schema::create('jenis_undangans', function (Blueprint $table) {
-            $table->bigIncrements('id_jenis_undangan');
+            $table->id();
             $table->string('nama_jenis_undangan');
             $table->timestamps();
         });

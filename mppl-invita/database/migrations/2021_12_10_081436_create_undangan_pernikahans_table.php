@@ -14,8 +14,8 @@ class CreateUndanganPernikahansTable extends Migration
     public function up()
     {
         Schema::create('undangan_pernikahans', function (Blueprint $table) {
-            $table->bigIncrements('id_undangan_pernikahan');
-            $table->foreignId('id_undangan')->references('id_undangan')->on('undangans');
+            $table->id();
+            $table->foreignId('id_undangan')->references('id')->on('undangans');
             $table->char('honorific_mempelai_lk', 5);
             $table->string('nama_mempelai_lk');
             $table->text('deskripsi_mempelai_lk');

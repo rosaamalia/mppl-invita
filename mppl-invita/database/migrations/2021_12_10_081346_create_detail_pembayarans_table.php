@@ -14,8 +14,8 @@ class CreateDetailPembayaransTable extends Migration
     public function up()
     {
         Schema::create('detail_pembayarans', function (Blueprint $table) {
-            $table->bigIncrements('id_detail_pembayaran');
-            $table->foreignId('id_order')->references('id_order')->on('orders');
+            $table->id();
+            $table->foreignId('id_order')->references('id')->on('orders');
             $table->string('metode_pembayaran');
             $table->boolean('status_pembayaran')->default(0);
             $table->timestamp('waktu_pembayaran');

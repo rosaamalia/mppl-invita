@@ -20,12 +20,6 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-
     <!-- navbar -->
     @include('components/navbar')
     <!-- end navbar -->
@@ -41,7 +35,7 @@
             <div class="row">
               <h1 class="text-white" style="font-size: 5rem"><strong>Invita.</strong>id</h1>
             </div>
-            <div class="row justify-content-center mt-5 pt-4">
+            {{-- <div class="row justify-content-center mt-5 pt-4">
               <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
                 <button type="button" class="btn text-start text-black fs-3 w-100" style="padding-left: 60px; color: #ccc">Daftar dengan google</button>
                 <span class="icon-form bi bi-google fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></span>
@@ -49,49 +43,89 @@
             </div>
             <div class="row mt-3">
               <div class="col-12 fs-2" style="color: rgb(255, 255, 255)"><p>atau</p></div>
-            </div>
-            <div class="row justify-content-center mt-3">
-              <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
-                <input type="text" class="form-control text-start text-black fs-3 w-100 border-0" style="padding-left: 60px; color: #ccc; border-radius: 10px" placeholder="Nama Lengkap" />
-                <span class="icon-form material-icons fs-1 ps-3 pe-3 pt-3 position-absolute" style="top: 0; left: 0; height: 100%"> badge </span>
+            </div> --}}
+            <form action="/daftar" method="POST">
+              @csrf
+              <div class="row justify-content-center mt-3">
+                <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
+                  <input type="text" id="nama-lengkap" name="nama-lengkap" class="form-control text-start text-black fs-3 w-100 border-0 @error('nama-lengkap') is-invalid @enderror" style="padding-left: 60px; color: #ccc; border-radius: 10px" placeholder="Nama Lengkap" value="{{ old('nama-lengkap') }}"/>
+                  <span class="icon-form material-icons fs-1 ps-3 pe-3 pt-3 position-absolute" style="top: 0; left: 0; height: 100%"> badge </span>
+                  @error('nama-lengkap')
+                  <div class="invalid-feedback text-start fs-5 w-100" style="padding-left: 60px;">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>
               </div>
-            </div>
-            <div class="row justify-content-center mt-3">
-              <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
-                <input type="email" class="form-control text-start text-black fs-3 w-100 border-0" style="padding-left: 60px; color: #ccc; border-radius: 10px" placeholder="Email" />
-                <i class="icon-form bi bi-envelope-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+              <div class="row justify-content-center mt-3">
+                <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
+                  <input type="text" id="username" name="username" class="form-control text-start text-black fs-3 w-100 border-0 @error('username') is-invalid @enderror" style="padding-left: 60px; color: #ccc; border-radius: 10px" placeholder="Username" value="{{ old('username') }}"/>
+                  <span class="icon-form material-icons fs-1 ps-3 pe-3 pt-3 position-absolute" style="top: 0; left: 0; height: 100%"> badge </span>
+
+                  @error('username')
+                  <div class="invalid-feedback text-start fs-5 w-100" style="padding-left: 60px;">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>
               </div>
-            </div>
-            <div class="row justify-content-center mt-3">
-              <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
-                <input type="tel" class="form-control text-start text-black fs-3 w-100 border-0" style="padding-left: 60px; color: #ccc; border-radius: 10px" placeholder="Nomor Handphone" />
-                <i class="icon-form bi bi-telephone-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+              <div class="row justify-content-center mt-3">
+                <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
+                  <input type="email" id="email" name="email" class="form-control text-start text-black fs-3 w-100 border-0 @error('email') is-invalid @enderror" style="padding-left: 60px; color: #ccc; border-radius: 10px" placeholder="Email" value="{{ old('email') }}"/>
+                  <i class="icon-form bi bi-envelope-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+                  @error('email')
+                  <div class="invalid-feedback text-start fs-5 w-100" style="padding-left: 60px;">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>
               </div>
-            </div>
-            <div class="row justify-content-center mt-4">
-              <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
-                <input type="password" id="pass" name="password" class="form-control text-start text-black fs-3 w-100 border-0" placeholder="Kata Sandi" style="padding-left: 60px; color: #ccc; border-radius: 10px" />
-                <i class="icon-form bi bi-key-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+              <div class="row justify-content-center mt-3">
+                <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
+                  <input type="tel" id="telepon" name="telepon" class="form-control text-start text-black fs-3 w-100 border-0 @error('telepon') is-invalid @enderror" style="padding-left: 60px; color: #ccc; border-radius: 10px" placeholder="Nomor Handphone" value="{{ old('telepon') }}"/>
+                  <i class="icon-form bi bi-telephone-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+                  @error('telepon')
+                  <div class="invalid-feedback text-start fs-5 w-100" style="padding-left: 60px;">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>
               </div>
-            </div>
-            <div class="row justify-content-center mt-4">
-              <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
-                <input
-                  type="password"
-                  id="confirm-pass"
-                  name="confirm-password"
-                  class="form-control text-start text-black fs-3 w-100 border-0"
-                  placeholder="Konfirmasi Kata Sandi"
-                  style="padding-left: 60px; color: #ccc; border-radius: 10px"
-                />
-                <i class="icon-form bi bi-key-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+              <div class="row justify-content-center mt-4">
+                <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
+                  <input type="password" id="password" name="password" class="form-control text-start text-black fs-3 w-100 border-0 @error('password') is-invalid @enderror" placeholder="Kata Sandi" style="padding-left: 60px; color: #ccc; border-radius: 10px"/>
+                  <i class="icon-form bi bi-key-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+                  @error('password')
+                  <div class="invalid-feedback text-start fs-5 w-100" style="padding-left: 60px;">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>
               </div>
-            </div>
-            <div class="row justify-content-center mt-5 pt-3">
-              <div class="col-12" style="border-radius: 10px">
-                <button type="button" class="btn text-center text-white fw-normal ps-4 pe-4 fs-3 pt-2 pb-2" style="background-color: #044581">Daftar</button>
+              <div class="row justify-content-center mt-4">
+                <div class="col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 bg-white pt-2 pb-2 position-relative" style="border-radius: 10px">
+                  <input
+                    type="password"
+                    id="confirm-pass"
+                    name="confirm-password"
+                    class="form-control text-start text-black fs-3 w-100 border-0 @error('confirm-password') is-invalid @enderror"
+                    placeholder="Konfirmasi Kata Sandi"
+                    style="padding-left: 60px; color: #ccc; border-radius: 10px"
+                  />
+                  <i class="icon-form bi bi-key-fill fs-1 ps-3 pe-3 pt-1 position-absolute" style="top: 0; left: 0; height: 100%"></i>
+                  @error('confirm-password')
+                  <div class="invalid-feedback text-start fs-5 w-100" style="padding-left: 60px;">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>
               </div>
-            </div>
+              <div class="row justify-content-center mt-5 pt-3">
+                <div class="col-12" style="border-radius: 10px">
+                  <button type="submit" class="btn text-center text-white fw-normal ps-4 pe-4 fs-3 pt-2 pb-2" style="background-color: #044581">Daftar</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

@@ -14,8 +14,8 @@ class CreateTamusTable extends Migration
     public function up()
     {
         Schema::create('tamus', function (Blueprint $table) {
-            $table->bigIncrements('id_tamu');
-            $table->foreignId('id_undangan')->references('id_undangan')->on('undangans');
+            $table->id();
+            $table->foreignId('id_undangan')->references('id')->on('undangans');
             $table->string('nama_tamu');
             $table->char('telepon_tamu', 15);
             $table->boolean('kehadiran_tamu')->default(1);
