@@ -91,10 +91,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Fredi & Maleeva</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Fredi & Maleeva</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -132,10 +132,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Arif & Dita</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Arif & Dita</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -173,10 +173,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Melda & Dio</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Melda & Dio</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -214,10 +214,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Amel & Dhika</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Amel & Dhika</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -255,10 +255,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Myrantika & Triyan</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Myrantika & Triyan</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -296,10 +296,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Ayu & Angga</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Ayu & Angga</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -337,10 +337,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Dini & Tajul</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Dini & Tajul</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -378,10 +378,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Ayu & Rustam</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Ayu & Rustam</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -419,10 +419,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Venna & Andi</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Venna & Andi</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -460,10 +460,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Dessi & Bayu</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Dessi & Bayu</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -501,10 +501,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Icha & Haris</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Icha & Haris</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -542,10 +542,10 @@
               <div class="col-9">
                 <div class="row row-text-port mt-4" style="">
                   <div class="col-2 text-center">
-                    <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                    <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                   </div>
                   <div class="col-10">
-                    <h2 style="font-size: 2.5rem; color: #82b493">Elda & Rifai</h2>
+                    <h2 style="font-size: 2.5rem; color: #0199FF">Elda & Rifai</h2>
                   </div>
                 </div>
                 <div class="row mt-4 row-text-port" style="">
@@ -587,10 +587,10 @@
             <div class="col-9">
               <div class="row row-text-port mt-4" style="">
                 <div class="col-2 text-center">
-                  <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                  <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                 </div>
                 <div class="col-10">
-                  <h2 style="font-size: 2.5rem; color: #82b493">John’s Birthday</h2>
+                  <h2 style="font-size: 2.5rem; color: #0199FF">John’s Birthday</h2>
                 </div>
               </div>
               <div class="row mt-4 row-text-port" style="">
@@ -628,10 +628,10 @@
             <div class="col-9">
               <div class="row row-text-port mt-4" style="">
                 <div class="col-2 text-center">
-                  <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                  <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                 </div>
                 <div class="col-10">
-                  <h2 style="font-size: 2.5rem; color: #82b493">Rebecca Holden</h2>
+                  <h2 style="font-size: 2.5rem; color: #0199FF">Rebecca Holden</h2>
                 </div>
               </div>
               <div class="row mt-4 row-text-port" style="">
@@ -669,10 +669,10 @@
             <div class="col-9">
               <div class="row row-text-port mt-4" style="">
                 <div class="col-2 text-center">
-                  <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                  <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                 </div>
                 <div class="col-10">
-                  <h2 style="font-size: 2.5rem; color: #82b493">Samantha</h2>
+                  <h2 style="font-size: 2.5rem; color: #0199FF">Samantha</h2>
                 </div>
               </div>
               <div class="row mt-4 row-text-port" style="">
@@ -710,10 +710,10 @@
             <div class="col-9">
               <div class="row row-text-port mt-4" style="">
                 <div class="col-2 text-center">
-                  <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                  <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                 </div>
                 <div class="col-10">
-                  <h2 style="font-size: 2.5rem; color: #82b493">Merry</h2>
+                  <h2 style="font-size: 2.5rem; color: #0199FF">Merry</h2>
                 </div>
               </div>
               <div class="row mt-4 row-text-port" style="">
@@ -751,10 +751,10 @@
             <div class="col-9">
               <div class="row row-text-port mt-4" style="">
                 <div class="col-2 text-center">
-                  <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                  <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                 </div>
                 <div class="col-10">
-                  <h2 style="font-size: 2.5rem; color: #82b493">Kayle</h2>
+                  <h2 style="font-size: 2.5rem; color: #0199FF">Kayle</h2>
                 </div>
               </div>
               <div class="row mt-4 row-text-port" style="">
@@ -792,10 +792,10 @@
             <div class="col-9">
               <div class="row row-text-port mt-4" style="">
                 <div class="col-2 text-center">
-                  <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                  <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                 </div>
                 <div class="col-10">
-                  <h2 style="font-size: 2.5rem; color: #82b493">Rinta</h2>
+                  <h2 style="font-size: 2.5rem; color: #0199FF">Rinta</h2>
                 </div>
               </div>
               <div class="row mt-4 row-text-port" style="">
@@ -835,10 +835,10 @@
             <div class="col-9">
               <div class="row row-text-port mt-4" style="">
                 <div class="col-2 text-center">
-                  <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                  <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                 </div>
                 <div class="col-10">
-                  <h2 style="font-size: 2.5rem; color: #82b493">Karen’s Bridal Shower</h2>
+                  <h2 style="font-size: 2.5rem; color: #0199FF">Karen’s Bridal Shower</h2>
                 </div>
               </div>
               <div class="row mt-4 row-text-port" style="">
@@ -876,10 +876,10 @@
             <div class="col-9">
               <div class="row row-text-port mt-4" style="">
                 <div class="col-2 text-center">
-                  <span class="material-icons" style="font-size: 35px; color: #82b493"> people </span>
+                  <span class="material-icons" style="font-size: 35px; color: #0199FF"> people </span>
                 </div>
                 <div class="col-10">
-                  <h2 style="font-size: 2.5rem; color: #82b493">Khitanan Pertama Yusuf </h2>
+                  <h2 style="font-size: 2.5rem; color: #0199FF">Khitanan Pertama Yusuf </h2>
                 </div>
               </div>
               <div class="row mt-4 row-text-port" style="">
