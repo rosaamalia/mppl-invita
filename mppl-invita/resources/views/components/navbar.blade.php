@@ -34,7 +34,7 @@
           </li>
           <li class="nav-item pe-lg-5 pe-sm-2 pe-3 blog">
             <div class="row">
-              <a class="nav-link text-white blog" href="#blog">Blog</a>
+              <a class="nav-link text-white blog" href="/blog">Blog</a>
             </div>
             
             @if (Route::currentRouteName() == 'blog') 
