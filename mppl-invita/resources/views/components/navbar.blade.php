@@ -58,7 +58,7 @@
           </li>
           <li class="nav-item pe-lg-5 pe-sm-2 pe-3 faq">
             <div class="row">
-              <a class="nav-link text-white faq" href="#faq">FAQ</a>
+              <a class="nav-link text-white faq" href="/faq">FAQ</a>
             </div>
             
             @if (Route::currentRouteName() == 'faq')

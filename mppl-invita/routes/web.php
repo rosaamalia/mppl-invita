@@ -36,6 +36,10 @@ Route::get('/blog', [function () {
     return view('blog');
 }])->name('blog');
 
+Route::get('/faq', [function () {
+    return view('faq');
+}])->name('faq');
+
 Route::name('order')->prefix('order')->group(function () {
     Route::get('/', [OrderController::class, 'index'])->middleware('auth');
     Route::get('/buat', [OrderController::class, 'buat'])->middleware('auth');
