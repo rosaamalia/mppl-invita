@@ -17,6 +17,7 @@ class CreateUndanganUlangTahunsTable extends Migration
             $table->id();
             $table->foreignId('id_undangan')->references('id')->on('undangans');
             $table->char('honorific_ulangtahun', 5);
+            $table->string('nama_ulangtahun');
             $table->date('tanggal_lahir_ulangtahun');
             $table->text('deskripsi_ulangtahun')->nullable();
             $table->timestamps();
