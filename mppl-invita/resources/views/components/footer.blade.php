@@ -1,5 +1,5 @@
 <!-- contact footer -->
-<div class="container-fluid pt-5" style="background-color: #fafafa; height: 100%">
+  <div class="container-fluid pt-5" style="background-color: #fafafa; height: 100%">
     <div class="container">
       <div class="row d-md-flex justify-content-center">
         <div class="invita-footer-col col-lg-2 col-md-3 col-sm-4 col-8 mb-5">

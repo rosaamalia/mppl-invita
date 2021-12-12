@@ -94,8 +94,8 @@
               <i class="bi bi-person-circle" style="padding-left: 15px"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="font-size: 1.5rem">
-              <li><a class="dropdown-item" href="#">Kelola Akun</a></li>
-              <li><a class="dropdown-item" href="#">Undangan Saya</a></li>
+              <li><a class="dropdown-item" href="/akun">Kelola Akun</a></li>
+              <li><a class="dropdown-item" href="/order">Undangan Saya</a></li>
               <li><hr class="dropdown-divider"></li>
               <li>
                 <form action="/keluar" method="POST">

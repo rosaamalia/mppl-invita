@@ -45,3 +45,11 @@ Route::name('order')->prefix('order')->group(function () {
     Route::get('/buat', [OrderController::class, 'buat'])->middleware('auth');
     Route::post('/buat', [OrderController::class, 'buatUndangan']);
 });
+
+Route::get('/akun', [function () {
+    return view('akun');
+}])->name('akun');
+
+Route::get('/harga', [function () {
+    return view('harga');
+}])->name('harga');
