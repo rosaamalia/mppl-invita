@@ -16,8 +16,8 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_user')->references('id')->on('users');
-            $table->date('tanggal_order');
-            $table->decimal('total_harga', 8, 2);
+            $table->date('tanggal_order')->default(date('Y-m-d'));
+            $table->decimal('total_harga')->default(0);
             $table->boolean('status_order')->nullable()->default(0);
             $table->timestamps();
         });

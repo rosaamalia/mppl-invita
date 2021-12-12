@@ -56,11 +56,12 @@
       </div>
     </div>
     @endif
-
-  <form action="/masuk" method="post">
-    @csrf
+    
     <h2 class="h3 mb-3 fw-normal">Invita.id</h2>
     <h2 class="h3 mb-3 fw-normal">Masuk sebagai Admin</h2>
+
+  <form action="/masuk" method="POST">
+    @csrf
 
     <div class="form-floating">
       <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">

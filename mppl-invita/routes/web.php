@@ -32,8 +32,12 @@ Route::get('/masuk', [LoginController::class, 'index'])->middleware('guest')->na
 Route::post('/masuk', [LoginController::class, 'masuk']);
 Route::post('/keluar', [LoginController::class, 'keluar']);
 
-Route::get('/order', [OrderController::class, 'index'])->middleware('auth')->name('order');
-
 Route::get('/blog', [function () {
     return view('blog');
 }])->name('blog');
+
+Route::name('order')->prefix('order')->group(function () {
+    Route::get('/', [OrderController::class, 'index'])->middleware('auth');
+    Route::get('/buat', [OrderController::class, 'buat'])->middleware('auth');
+    Route::post('/buat', [OrderController::class, 'buatUndangan']);
+});
