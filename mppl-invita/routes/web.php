@@ -33,3 +33,7 @@ Route::post('/masuk', [LoginController::class, 'masuk']);
 Route::post('/keluar', [LoginController::class, 'keluar']);
 
 Route::get('/order', [OrderController::class, 'index'])->middleware('auth')->name('order');
+
+Route::get('/blog', [function () {
+    return view('blog');
+}])->name('blog');
