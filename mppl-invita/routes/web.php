@@ -62,3 +62,7 @@ Route::get('/order/undangan/{id}', [OrderController::class, 'detail'])->middlewa
 
 Route::get('/akun', [AkunController::class, 'akun'])->name('akun');
 Route::post('/akun', [AkunController::class, 'update']);
+
+Route::get('/order/pembayaran', [function () {
+    return view('order.pembayaran');
+}])->name('pembayaran');
