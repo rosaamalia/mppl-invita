@@ -176,7 +176,7 @@
           <div class="col-3">
             <button
                 type="button"
-                class="btn border-0 py-3 text-white w-100 fs-3 fw-bolder"
+                class="btn button border-0 py-3 text-white w-100 fs-3 fw-bolder"
                 style="border-radius: 10px; background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)"
                 >
                 Buat Undangan
