@@ -14,6 +14,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     @include('components.fonts')
@@ -55,7 +56,7 @@
         <h1 class="fw-normal" style="color: #0199ff; font-size: 32px;"><strong>Pesan</strong> Sekarang</h1>
         <p class="lead text-muted" style="font-size: 14px;">Buat Undangan Digital Anda sekarang. Baik undangan pernikahan, undangan ulang tahun, atau undangan untuk kegiatan lain! Buat undangan yang memudahkan anda untuk berbagi informasi kepada tamu anda dan tentunya ramah lingkungan.</p>
         <p>
-          <a href="/order/buat" class="btn btn-primary m-2 px-5 shadow border-0" style="background: white; color:#0199ff;font-size: 16px;">Buat Undangan</a>
+          <a  class="pesan btn btn-primary m-2 px-5 shadow border-0" style="background: white; color:#0199ff;font-size: 16px;" data-bs-toggle="modal" data-bs-target="#modalTour">Buat Undangan</a>
           <a href="/order/harga" class="btn btn-primary m-2 px-5 shadow border-0" style="background: #0199ff; color: white;font-size: 16px;">Lihat Daftar Harga</a>
         </p>
       </div>
@@ -64,14 +65,10 @@
 
 
   <div class="album py-5 bg-light">
-    @if ($data)
       <h1 class="fw-normal pb-5" style="color: #0199ff; font-size: 32px; padding-left: 90px">Undangan Saya</h1>
-    @else
-      
-    @endif
 
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="min-height: 15vh">
   
         @foreach ($data as $item)
         <div class="col">
@@ -97,6 +94,45 @@
     </div>
   </div>
 
+  {{-- modal --}}
+  <div class="modal fs-2" tabindex="-1" role="dialog" id="modalTour" aria-hidden="true" style="margin-top: 20vh;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-6 shadow" style="width: 700px">
+        <div>
+        <button type="button" class="btn btn-primary w-" data-bs-dismiss="modal">
+          <p class="fs-1">&times;</p>
+        </button>
+        </div>
+        <div class="modal-body p-5 d-flex justify-content-center flex-column">
+          <h2 class="fw-bold mb-0 text-align-center" style="text-align: center">Tentukan Acaramu</h2>
+  
+          <ul class="d-flex gap-4 my-5 list-unstyled justify-content-center">
+            <li class="d-flex gap-4 align-items-center">
+              <img src="/img/i-pernikahan.png" style="height: 60px; width: 60px" alt="">
+                <a href="#" style="text-decoration: none">
+                  <h5 class="mb-0">Undangan</h5>
+                  <p class="mb-0" style="color: #0199ff; font-weight: 600">Pernikahan</p>
+                </a>
+            </li>
+            <li class="d-flex gap-4 align-items-center">
+              <img src="/img/i-ultah.png" style="height: 60px; width: 60px" alt="">
+                <a href="#" style="text-decoration: none">
+                  <h5 class="mb-0">Undangan</h5>
+                  <p class="mb-0" style="color: #0199ff; font-weight: 600">Ulang Tahun</p>
+                </a>
+            </li>
+            <li class="d-flex gap-4 align-items-center">
+              <img src="/img/i-lainnya.png" style="height: 60px; width: 60px" alt="">
+                <a href="#" style="text-decoration: none">
+                  <h5 class="mb-0">Undangan</h5>
+                  <p class="mb-0" style="color: #0199ff; font-weight: 600">Lainnya</p>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </main>
 
@@ -104,6 +140,13 @@
   @include('components/footer')
   <!-- end footer -->
 
+  <script>
+    $(document).ready(function(){
+        $(".pesan").click(function(){
+            $("#modalTour").modal('show');
+        });
+    });
+  </script>
       
   </body>
 </html>
