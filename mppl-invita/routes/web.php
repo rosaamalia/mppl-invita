@@ -70,3 +70,7 @@ Route::post('/akun', [AkunController::class, 'update']);
 Route::get('/order/pembayaran', [function () {
     return view('order.pembayaran');
 }])->name('pembayaran');
+
+Route::get('/order/bukutamu', [function () {
+    return view('order.bukutamu');
+}])->name('bukutamu');
