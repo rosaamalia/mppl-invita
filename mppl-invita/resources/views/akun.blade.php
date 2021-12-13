@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Invita.id</title>
+    <title>Kelola Akun | Invita.id</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
@@ -15,8 +15,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>                                         
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>    
     
+    @include('components.fonts')
   </head>
   <body>
     <!-- Optional JavaScript; choose one of the two! -->
@@ -33,7 +34,7 @@
     <!-- navbar -->
     @include('components/navbar')
     <!-- end navbar -->
-    
+    <main style="padding-bottom: 20vh">
     <!-- data akun -->
     <div class="container">
     <a href="/"><button class="btn fs-2 mt-5" style="color : #0199FF"><i class="bi bi-arrow-left"></i> Kembali</button></a>
@@ -42,17 +43,28 @@
         <h1 class="fs-1 fw-bold" style="color : #0199FF">Kelola Akun</h1>
       </div>
       <div class="col-2">
-        <button class="btn button btn-ubah text-white fs-3 ps-4 pe-4" type="submit" style="background-color: #0199FF">Ubah</button>
+        <button class="btn button btn-ubah text-white fs-3 ps-4 pe-4" style="background-color: #0199FF">Ubah</button>
       </div>
     </div>
+
+    @if(session()->has('sukses'))
+      <div class="row align-items-start" style="width: 100%">
+        <div class="alert alert-success alert-dismissible fade show col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11 fs-3" role="alert">
+          {{ session('sukses') }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    @endif
     
+    <form action="/akun" method="post">
+      @csrf
     <div class="row mt-4">
         <div class="col-2 fs-3 fw-bold">
             <p>Nama</p>
         </div>
         <div class="col-5">
-            <p class="fs-3 p-ubah">$Nama</p>
-            <input type="text" class="form-control input-ubah fs-3 " placeholder="Nama" aria-label="Username" aria-describedby="">
+            <p class="fs-3 p-ubah">{{ $data['nama_user'] }}</p>
+            <input type="text" class="form-control input-ubah fs-3 " placeholder="Nama" aria-label="Username" name="nama_lengkap" id="nama_lengkap" value="{{ $data['nama_user'] }}">
         </div>
     </div>
     <div class="row mt-4">
@@ -60,8 +72,8 @@
             <p>Username</p>
         </div>
         <div class="col-5">
-            <p class="fs-3 p-ubah">$Username</p>
-            <input type="text" class="form-control input-ubah fs-3 " placeholder="Username" aria-label="Username" aria-describedby="">
+            <p class="fs-3 p-ubah">{{ $data['username'] }}</p>
+            <input type="text" class="form-control input-ubah fs-3 " placeholder="Username" aria-label="Username" aria-describedby="" name="username" id="username" value="{{ $data['username'] }}">
         </div>
     </div>
     <div class="row mt-4">
@@ -69,8 +81,8 @@
             <p>Email</p>
         </div>
         <div class="col-5">
-            <p class="fs-3 p-ubah">$Email</p>
-            <input type="email" class="form-control input-ubah fs-3 " placeholder="Email" aria-label="Username" aria-describedby="">
+            <p class="fs-3 p-ubah">{{ $data['email'] }}</p>
+            <input type="email" class="form-control input-ubah fs-3 " placeholder="Email" aria-label="" aria-describedby="" name="email" id="email" value="{{ $data['email'] }}">
         </div>
     </div>
     <div class="row mt-4">
@@ -78,8 +90,8 @@
             <p>Nomor Telepon</p>
         </div>
         <div class="col-5">
-            <p class="fs-3 p-ubah">$Nomor Telepon</p>
-            <input type="text" class="form-control input-ubah fs-3 " placeholder="Nomor Telepon" aria-label="Username" aria-describedby="">
+            <p class="fs-3 p-ubah">{{ $data['telepon_user'] }}</p>
+            <input type="text" class="form-control input-ubah fs-3 " placeholder="Nomor Telepon" aria-label="Username" aria-describedby="" name="telepon" id="telepon" value="{{ $data['telepon_user'] }}">
         </div>
     </div>
     <div class="row mt-4">
@@ -87,8 +99,12 @@
             <p>Tanggal Lahir</p>
         </div>
         <div class="col-5">
-            <p class="fs-3 p-ubah">$Tanggal Lahir</p>
-            <input type="date" class="form-control input-ubah fs-3 " placeholder="dd-mm-yy" aria-label="Username" aria-describedby="">
+            @if ($data['tanggal_lahir_user'] == null)
+            <p class="fs-3 p-ubah" style="opacity: 0.5">Tanggal lahir belum diatur</p>  
+            @else 
+              <p class="fs-3 p-ubah">{{ $data['tanggal_lahir_user'] }}</p>
+            @endif
+            <input type="date" class="form-control input-ubah fs-3 " placeholder="dd-mm-yy" aria-label="Username" aria-describedby="" name="tanggal_lahir" id="tanggal_lahir" value="{{ $data['tanggal_lahir_user'] }}">
         </div>
     </div>
     <div class="row mt-4">
@@ -96,9 +112,13 @@
             <p>Jenis Kelamin</p>
         </div>
         <div class="col-5">
-            <p class="fs-3 p-ubah">$Jenis Kelamin</p>
-            <select class="form-select input-ubah fs-3 " aria-label="Default select example">
-                <option selected>Pilih Jenis Kelamin</option>
+            @if ($data['jenis_kelamin_user'] == null)
+            <p class="fs-3 p-ubah" style="opacity: 0.5">Jenis Kelamin belum diatur</p>  
+            @else 
+              <p class="fs-3 p-ubah">{{ $data['jenis_kelamin_user'] }}</p>
+            @endif
+            <select class="form-select input-ubah fs-3 " aria-label="Default select example" name="jenis_kelamin" id="jenis_kelamin">
+                <option value="{{ $data['jenis_kelamin_user'] }}"selected>@if($data['jenis_kelamin_user'] == null) Pilih Jenis Kelamin @else {{ $data['jenis_kelamin_user'] }} @endif</option>
                 <option value="L">Laki - Laki</option>
                 <option value="P">Perempuan</option>
             </select>
@@ -106,11 +126,13 @@
     </div>
     <div class="row mt-4 btn-form-ubah">
         <div class="col-7 fs-3 fw-bold text-end justify-content-end">
-          <button class="btn button btn-batal  fs-3 ps-5 pe-5 fw-bold" type="submit" style="">Batal</button>
+          <button class="btn button btn-batal  fs-3 ps-5 pe-5 fw-bold" style="">Batal</button>
           <button class="btn button btn-simpan text-white fs-3 ps-4 pe-4 fw-bold" type="submit" style="background-color: #0199FF">Simpan</button>
         </div>
     </div>
+  </form>
     </div>
+  </main>
     <!-- end data akun -->
 
     <!-- footer -->

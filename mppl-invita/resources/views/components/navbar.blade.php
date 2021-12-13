@@ -46,7 +46,7 @@
           </li>
           <li class="nav-item pe-lg-5 pe-sm-2 pe-3 review">
             <div class="row">
-              <a class="nav-link text-white review" href="#review">Review</a>
+              <a class="nav-link text-white review" href="/review">Review</a>
             </div>
             
             @if (Route::currentRouteName() == 'review') 

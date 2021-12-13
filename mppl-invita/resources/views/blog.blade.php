@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>                                         
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>     
+    @include('components.fonts')                                    
     
   </head>
   <body>
@@ -63,7 +64,7 @@
 
     <!-- blog -->
     <div class="container">
-        <div class="row justify-content-center fs-4">
+        <div class="row justify-content-center fs-4 gap-5">
             <div class="col-5 mb-5">
                 <div class="card h-100" style="width: 50rem; border-radius:15px">
                     <img src="img/blog1.png" class="card-img-top" style="border-radius:15px 15px 0 0">

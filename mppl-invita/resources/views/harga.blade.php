@@ -13,6 +13,7 @@
     <!-- css -->
     <link rel="stylesheet" href="/css/harga.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    @include('components.fonts')
   </head>
   <body>
     <!-- Optional JavaScript; choose one of the two! -->
@@ -47,7 +48,7 @@
             </div>
 
             <div class="row text-center">
-              <h3>IDR <strong>195K</strong></h3>
+              <h3 class="fs-1">IDR <strong>195K</strong></h3>
             </div>
             <div class="row text-center" style="font-size: 1.2rem">
               <p>Pilih Jumlah Tamu</p>
@@ -64,13 +65,13 @@
             </div>
             <div class="row justify-content-center mb-5" style="font-size: 1.5rem">
               <div class="col-5 p-0 m-0">
-                <button
+                {{-- <button
                   type="button"
                   class="btn border-0 pt-2 pb-2 text-white w-100 fs-3 fw-bolder"
                   style="border-radius: 10px; background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)"
                 >
                   Get This
-                </button>
+                </button> --}}
               </div>
             </div>
           </div>
@@ -91,12 +92,12 @@
             </div>
 
             <div class="row text-center" style="padding-top: 25px">
-              <h3>IDR <strong>195K</strong></h3>
+              <h3 class="fs-1" style="color: white">IDR <strong>2000K</strong></h3>
             </div>
-            <div class="row text-center" style="font-size: 1.2rem">
+            <div class="row text-center" style="font-size: 1.2rem; color: white">
               <p>Undangan Unlimited</p>
             </div>
-            <div class="row mx-auto w-75 mb-5" style="font-size: 1.5rem">
+            <div class="row mx-auto w-75 mb-5" style="font-size: 1.5rem; color: white">
               <ul>
                 <li>Countdown Timer</li>
                 <li>Foto Cover</li>
@@ -114,13 +115,13 @@
             </div>
             <div class="row justify-content-center mb-5" style="font-size: 1.5rem">
               <div class="col-5 p-0 m-0">
-                <button
+                {{-- <button
                   type="button"
                   class="btn border-0 pt-2 pb-2 text-white w-100 fs-3 fw-bolder"
                   style="border-radius: 10px; background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)"
                 >
                   Get This
-                </button>
+                </button> --}}
               </div>
             </div>
           </div>
@@ -132,7 +133,7 @@
             </div>
 
             <div class="row text-center" style="margin-top: -10px">
-              <h3>IDR <strong>195K</strong></h3>
+              <h3 class="fs-1">IDR <strong>3500K</strong></h3>
             </div>
             <div class="row text-center" style="font-size: 1.2rem">
               <p>Undangan Unlimited</p>
@@ -159,18 +160,32 @@
             </div>
             <div class="row justify-content-center mb-5" style="font-size: 1.5rem">
               <div class="col-5 p-0 m-0">
-                <button
+                {{-- <button
                   type="button"
                   class="btn border-0 pt-2 pb-2 text-white w-100 fs-3 fw-bolder"
                   style="border-radius: 10px; background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)"
                 >
                   Get This
-                </button>
+                </button> --}}
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="container m-5 d-flex justify-content-center">
+        <div class="row">
+          <div class="col-3 bg-dark">
+            <button
+                type="button"
+                class="btn border-0 py-3 text-white w-100 fs-3 fw-bolder"
+                style="border-radius: 10px; background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)"
+                >
+                Buat Undangan
+            </button>
+
+          </div>
+        </div>
+    </div>
     </section>
     <!-- end harga -->
 

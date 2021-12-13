@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\UndanganUlangTahun;
 use App\Models\Undangan;
+use App\Models\Review;
 use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
@@ -21,6 +22,8 @@ class OrderController extends Controller
             ->select('undangan_ulang_tahuns.*', 'undangans.id')
             ->where('users.id', '=', $id)
             ->get();
+
+        // dd($data);
 
         return view('order.order', [
             'data' => $data
@@ -153,5 +156,34 @@ class OrderController extends Controller
             'undangan' => $undangan,
             'detail' => $detail
         ]);
+    }
+
+    public function review($id)
+    {
+        $data = DB::table('orders')
+            ->join('users', 'orders.id_user', '=', 'users.id')
+            ->join('undangans', 'orders.id', '=', 'undangans.id_order')
+            ->join('undangan_ulang_tahuns', 'undangans.id', '=', 'undangan_ulang_tahuns.id_undangan')
+            ->select('undangan_ulang_tahuns.*')
+            ->where('undangans.id', '=', $id)
+            ->get();
+
+        return view('order.review', [
+            'data' => $data
+        ]);
+    }
+
+    public function reviewUndangan(Request $request, $id)
+    {
+        $id_order = Undangan::where('id', $id)->select('id_order')->get();
+        // dd($request);
+        $data = Review::create([
+            'id_order' => $id_order[0]->id_order,
+            'nama_user_review' => $request['nama_lengkap'],
+            'isi_review' => $request['review'],
+            'rating' => $request['star']
+        ]);
+
+        return redirect('/order');
     }
 }

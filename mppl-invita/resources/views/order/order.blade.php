@@ -15,6 +15,8 @@
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    @include('components.fonts')
   </head>
   <body>
     <!-- Optional JavaScript; choose one of the two! -->
@@ -82,7 +84,7 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a class="btn btn-sm btn-outline-secondary px-3" href="/order/undangan/{{ $item->id_undangan }}" style="font-size: 14px">Lihat Detail</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary px-3" style="font-size: 14px">Beri Review</button>
+                  <a type="button" class="btn btn-sm btn-outline-secondary px-3" id="review" href="/order/review/{{ $item->id }}" style="font-size: 14px">Beri Review</a>
                 </div>
               </div>
             </div>

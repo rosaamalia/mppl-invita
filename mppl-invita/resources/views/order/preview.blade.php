@@ -16,6 +16,8 @@
     <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/preview.css">
 
+    @include('components.fonts')
+
     <style>
         body {
             padding-top: 3.5rem;

@@ -13,6 +13,8 @@
     <!-- css -->
     <link rel="stylesheet" href="css/login.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    @include('components.fonts')
   </head>
   <body>
     <!-- Optional JavaScript; choose one of the two! -->

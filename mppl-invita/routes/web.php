@@ -3,6 +3,8 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\AkunController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +42,8 @@ Route::get('/faq', [function () {
     return view('faq');
 }])->name('faq');
 
+Route::get('/review', [ReviewController::class, 'index'])->name('review');
+
 Route::name('order')->prefix('order')->group(function () {
     Route::get('/', [OrderController::class, 'index'])->middleware('auth');
     Route::get('/buat', [OrderController::class, 'buat'])->middleware('auth');
@@ -50,10 +54,11 @@ Route::name('order')->prefix('order')->group(function () {
     Route::get('/harga', [function () {
         return view('harga');
     }]);
+    Route::get('/review/{id}', [OrderController::class, 'review'])->middleware('auth');
+    Route::post('/review/{id}', [OrderController::class, 'reviewUndangan']);
 });
 
 Route::get('/order/undangan/{id}', [OrderController::class, 'detail'])->middleware('auth')->name('undangan');
 
-Route::get('/akun', [function () {
-    return view('akun');
-}])->name('akun');
+Route::get('/akun', [AkunController::class, 'akun'])->name('akun');
+Route::post('/akun', [AkunController::class, 'update']);

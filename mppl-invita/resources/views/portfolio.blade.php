@@ -16,7 +16,7 @@
   
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>                                         
-    
+    @include('components.fonts')
   </head>
   <body>
     <!-- Optional JavaScript; choose one of the two! -->
