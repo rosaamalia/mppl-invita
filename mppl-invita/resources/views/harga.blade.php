@@ -65,13 +65,13 @@
             </div>
             <div class="row justify-content-center mb-5" style="font-size: 1.5rem">
               <div class="col-5 p-0 m-0">
-                {{-- <button
+                <button
                   type="button"
                   class="btn border-0 pt-2 pb-2 text-white w-100 fs-3 fw-bolder"
                   style="border-radius: 10px; background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)"
                 >
                   Get This
-                </button> --}}
+                </button>
               </div>
             </div>
           </div>
@@ -171,10 +171,9 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="container m-5 d-flex justify-content-center">
-        <div class="row">
-          <div class="col-3 bg-dark">
+
+        <div class="row mt-5 justify-content-center">
+          <div class="col-3">
             <button
                 type="button"
                 class="btn border-0 py-3 text-white w-100 fs-3 fw-bolder"
@@ -182,10 +181,9 @@
                 >
                 Buat Undangan
             </button>
-
           </div>
         </div>
-    </div>
+      </div> 
     </section>
     <!-- end harga -->
 
