@@ -52,7 +52,7 @@
   <div class="page-content">
 		<div class="wizard-v5-content">
 			<div class="wizard-form">
-		        <form class="form-register" id="form-register" action="/order/buat/ulangtahun" method="post">
+		        <form class="form-register" id="form-register" action="/order/buat/pernikahan" method="post">
               @csrf
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
@@ -92,28 +92,28 @@
                         <p style="color: #044581; font-weight:700; font-size: 20px">Profil</p>
                       <div class="form-row">
                         <div class="form-holder" style="width: 300px">
-                          <label for="honorific-lk">Nama Mempelai Pria</label>
+                          <label for="honorific-lk">Mempelai Pria:</label>
                           <select name="honorific-lk" id="honorific-lk" class="form-control">
-                            <option value="mr" selected>Mr.</option>
-                            <option value="ms">Ms.</option>
-                            <option value="mrs">Mrs.</option>
+                            <option value="Mr" selected>Mr.</option>
+                            <option value="Ms">Ms.</option>
+                            <option value="Mrs">Mrs.</option>
                           </select>
                         </div>
                         <div class="form-holder" style="width: 100%">
                           <label for="nama-lengkap-lk" style="display: hidden; color: white">Label</label>
-                          <input type="text" placeholder="Tulis nama Anda" class="form-control input-step-2" id="nama-lengkap-lk" name="nama-lengkap-lk">
+                          <input type="text" placeholder="Tulis nama mempelai pria" class="form-control input-step-2" id="nama-lengkap-lk" name="nama-lengkap-lk">
                           <span><i class="zmdi zmdi-search"></i></span>
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-holder form-holder-2">
-                          <label for="orangtua-lk">Nama Orang Tua Mempelai Pria</label>
+                          <label for="orangtua-lk">Nama Orang Tua Mempelai Pria:</label>
                           <input type="text" name="orangtua-lk" class="email input-step-2-1" id="orangtua-lk" placeholder="Nama orang tua mempelai pria">
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-holder form-holder-2">
-                          <label for="deskripsi-lk">Deskripsi Mempelai Pria</label>
+                          <label for="deskripsi-lk">Deskripsi Mempelai Pria:</label>
                           <input type="text" name="deskripsi-lk" class="email input-step-2-1" id="deskripsi-lk" placeholder="Isi deskripsi mempelai pria...">
                         </div>
                       </div>
@@ -121,29 +121,28 @@
                       {{-- wanita --}}
                       <div class="form-row">
                         <div class="form-holder" style="width: 300px">
-                          <label for="honorific-pr">Nama Mempelai Wanita</label>
+                          <label for="honorific-pr">Mempelai Wanita:</label>
                           <select name="honorific-pr" id="honorific-pr" class="form-control">
-                            <option value="mr" selected>Mr.</option>
-                            <option value="ms">Ms.</option>
-                            <option value="mrs">Mrs.</option>
+                            <option value="Mrs" selected>Mrs.</option>
+                            <option value="Ms">Ms.</option>
+                            <option value="Mr">Mr.</option>
                           </select>
                         </div>
                         <div class="form-holder" style="width: 100%">
-                          <label for="nama-lengkap-lk" style="display: hidden; color: white">Label</label>
-                          <input type="text" placeholder="Tulis nama Anda" class="form-control input-step-2" id="nama-lengkap-lk" name="nama-lengkap-lk">
-                          <span><i class="zmdi zmdi-search"></i></span>
+                          <label for="nama-lengkap-pr" style="display: hidden; color: white">Label</label>
+                          <input type="text" placeholder="Tulis nama mempelai wanita" class="form-control input-step-2" id="nama-lengkap-pr" name="nama-lengkap-pr">
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-holder form-holder-2">
-                          <label for="orangtua-lk">Nama Orang Tua Mempelai Pria</label>
-                          <input type="text" name="orangtua-lk" class="email input-step-2-1" id="orangtua-lk" placeholder="Nama orang tua mempelai pria">
+                          <label for="orangtua-pr">Nama Orang Tua Mempelai Wanita:</label>
+                          <input type="text" name="orangtua-pr" class="email input-step-2-1" id="orangtua-pr" placeholder="Nama orang tua mempelai wanita">
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-holder form-holder-2">
-                          <label for="deskripsi-lk">Deskripsi Mempelai Pria</label>
-                          <input type="text" name="deskripsi-lk" class="email input-step-2-1" id="deskripsi-lk" placeholder="Isi deskripsi mempelai pria...">
+                          <label for="deskripsi-pr">Deskripsi Mempelai Wanita:</label>
+                          <input type="text" name="deskripsi-pr" class="email input-step-2-1" id="deskripsi-pr" placeholder="Isi deskripsi mempelai wanita...">
                         </div>
                       </div>
                       

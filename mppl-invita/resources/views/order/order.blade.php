@@ -72,22 +72,40 @@
   
         @foreach ($data as $item)
         <div class="col">
-          <div class="card shadow-sm">
+          <div class="card shadow-sm" style="height: 350px">
             <img class="bd-placeholder-img card-img-top" src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" style="height: 220px; object-fit:cover">
             {{-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> --}}
 
             <div class="card-body d-flex flex-column justify-content-center align-items-center" style="font-size: 16px">
-              <p class="card-text">Ulang Tahun <strong>{{ $item->nama_ulangtahun }}</strong> 🎈</p>
+              <p class="card-text" style="text-align: center">Ulang Tahun <strong>{{ $item->nama_ulangtahun }}</strong> 🎈</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a class="btn btn-sm btn-outline-secondary px-3" href="/order/undangan/ulangtahun/{{ $item->id_undangan }}" style="font-size: 14px">Lihat Detail</a>
-                  <a type="button" class="btn btn-sm btn-outline-secondary px-3" id="review" href="/order/review/{{ $item->id }}" style="font-size: 14px">Beri Review</a>
+                  <a type="button" class="btn btn-sm btn-outline-secondary px-3" id="review" href="/order/undangan/ulangtahun/review/{{ $item->id }}" style="font-size: 14px">Beri Review</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        @endforeach
 
+        @foreach ($data_pernikahan as $item)
+        <div class="col">
+          <div class="card shadow-sm" style="height: 350px">
+            <img class="bd-placeholder-img card-img-top" src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" style="height: 220px; object-fit:cover">
+            {{-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> --}}
+
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="font-size: 16px">
+              <p class="card-text" style="text-align: center">Pernikahan <strong>{{ $item->nama_mempelai_lk }} dan {{ $item->nama_mempelai_pr }}</strong></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class="btn btn-sm btn-outline-secondary px-3" href="/order/undangan/pernikahan/{{ $item->id_undangan }}" style="font-size: 14px">Lihat Detail</a>
+                  <a type="button" class="btn btn-sm btn-outline-secondary px-3" id="review" href="/order/undangan/pernikahan/review/{{ $item->id_undangan }}" style="font-size: 14px">Beri Review</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         @endforeach
 
       </div>

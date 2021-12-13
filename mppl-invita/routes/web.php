@@ -52,17 +52,23 @@ Route::name('order')->prefix('order')->group(function () {
     Route::get('/undangan/ulangtahun/{id}/edit', [OrderController::class, 'editUlangTahun'])->middleware('auth');
     Route::post('/undangan/ulangtahun/{id}/edit', [OrderController::class, 'editUndanganUlangTahun']);
     Route::get('/undangan/ulangtahun/{id}/preview', [OrderController::class, 'previewUlangTahun'])->middleware('auth');
+    Route::get('/undangan/ulangtahun/review/{id}', [OrderController::class, 'reviewUlangTahun'])->middleware('auth');
+    Route::post('/undangan/ulangtahun/review/{id}', [OrderController::class, 'reviewUndanganUlangTahun']);
 
     Route::get('/buat/pernikahan', [OrderController::class, 'buatPernikahan'])->middleware('auth');
+    Route::post('/buat/pernikahan', [OrderController::class, 'buatUndanganPernikahan']);
+    Route::get('/undangan/pernikahan/{id}/edit', [OrderController::class, 'editPernikahan'])->middleware('auth');
+    Route::post('/undangan/pernikahan/{id}/edit', [OrderController::class, 'editUndanganPernikahan']);
+    Route::get('/undangan/pernikahan/review/{id}', [OrderController::class, 'reviewPernikahan'])->middleware('auth');
+    Route::post('/undangan/pernikahan/review/{id}', [OrderController::class, 'reviewUndanganPernikahan']);
 
     Route::get('/harga', [function () {
         return view('harga');
     }]);
-    Route::get('/review/{id}', [OrderController::class, 'review'])->middleware('auth');
-    Route::post('/review/{id}', [OrderController::class, 'reviewUndangan']);
 });
 
-Route::get('/order/undangan/ulangtahun/{id}', [OrderController::class, 'detailUlangTahun'])->middleware('auth')->name('undangan');
+Route::get('/order/undangan/ulangtahun/{id}', [OrderController::class, 'detailUlangTahun'])->middleware('auth')->name('undangan_ulangtahun');
+Route::get('/order/undangan/pernikahan/{id}', [OrderController::class, 'detailPernikahan'])->middleware('auth')->name('undangan_pernikahan');
 
 Route::get('/akun', [AkunController::class, 'akun'])->name('akun');
 Route::post('/akun', [AkunController::class, 'update']);

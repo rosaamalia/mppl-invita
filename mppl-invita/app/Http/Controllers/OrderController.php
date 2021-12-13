@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\UndanganUlangTahun;
 use App\Models\Undangan;
 use App\Models\Review;
+use App\Models\UndanganPernikahan;
 use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
@@ -23,10 +24,19 @@ class OrderController extends Controller
             ->where('users.id', '=', $id)
             ->get();
 
+        $data_pernikahan = DB::table('orders')
+            ->join('users', 'orders.id_user', '=', 'users.id')
+            ->join('undangans', 'orders.id', '=', 'undangans.id_order')
+            ->join('undangan_pernikahans', 'undangans.id', '=', 'undangan_pernikahans.id_undangan')
+            ->select('undangan_pernikahans.*', 'undangans.id')
+            ->where('users.id', '=', $id)
+            ->get();
+
         // dd($data);
 
         return view('order.order', [
-            'data' => $data
+            'data' => $data,
+            'data_pernikahan' => $data_pernikahan
         ]);
     }
 
@@ -135,7 +145,7 @@ class OrderController extends Controller
         ]);
 
         $request->session()->flash('sukses', 'Undangan berhasil diperbarui!');
-        return redirect()->route('undangan', [
+        return redirect()->route('undangan_ulangtahun', [
             'id' => $id
         ]);
     }
@@ -158,7 +168,7 @@ class OrderController extends Controller
         ]);
     }
 
-    public function review($id)
+    public function reviewUlangTahun($id)
     {
         $data = DB::table('orders')
             ->join('users', 'orders.id_user', '=', 'users.id')
@@ -168,12 +178,12 @@ class OrderController extends Controller
             ->where('undangans.id', '=', $id)
             ->get();
 
-        return view('order.review', [
+        return view('order.ulangtahun.review', [
             'data' => $data
         ]);
     }
 
-    public function reviewUndangan(Request $request, $id)
+    public function reviewUndanganUlangTahun(Request $request, $id)
     {
         $id_order = Undangan::where('id', $id)->select('id_order')->get();
         // dd($request);
@@ -184,12 +194,154 @@ class OrderController extends Controller
             'rating' => $request['star']
         ]);
 
-        return redirect('/order');
+        return redirect('/review');
     }
 
     // pernikahan
     public function buatPernikahan()
     {
         return view('order.pernikahan.buat');
+    }
+
+    public function buatUndanganPernikahan(Request $request)
+    {
+        // dd($request[0]);
+        $id_user = auth()->user()->id;
+        $tanggal = date('Y-m-d');
+
+        if ($request['jenis'] == 'basic') {
+            $harga = 195000;
+        } else {
+            $harga = 2000000;
+        }
+
+        // dd($harga);
+        $order = Order::create([
+            'id_user' => $id_user,
+            'total_harga' => $harga,
+            'status_order' => 0
+        ]);
+
+        $undangan = Undangan::create([
+            'id_jenis_undangan' => 1,
+            'id_order' => $order->id,
+            'tema_undangan' => $request['jenis'],
+            'tanggal_mulai_acara' => $request['tanggal-mulai'],
+            'tanggal_berakhir_acara' => $request['tanggal-berakhir'],
+            'waktu_mulai_acara' => $request['waktu-mulai'],
+            'waktu_berakhir_acara' => $request['waktu-berakhir'],
+            'lokasi_acara' => $request['lokasi'],
+            'alamat_acara' => $request['alamat']
+        ]);
+
+        $udangan_pernikahan = UndanganPernikahan::create([
+            'id_undangan' => $undangan->id,
+            'honorific_mempelai_lk' => $request['honorific-lk'],
+            'nama_mempelai_lk' => $request['nama-lengkap-lk'],
+            'orangtua_mempelai_lk' => $request['orangtua-lk'],
+            'deskripsi_mempelai_lk' => $request['deskripsi-lk'],
+            'honorific_mempelai_pr' => $request['honorific-pr'],
+            'nama_mempelai_pr' => $request['nama-lengkap-pr'],
+            'orangtua_mempelai_pr' => $request['orangtua-pr'],
+            'deskripsi_mempelai_pr' => $request['deskripsi-pr']
+        ]);
+
+        $request->session()->flash('sukses', 'Undangan berhasil dibuat!');
+        return redirect('/order');
+    }
+
+    public function detailPernikahan($id)
+    {
+        $undangan = DB::table('undangans')
+            ->where('id', '=', $id)
+            ->select('undangans.*')
+            ->get();
+
+        $detail = DB::table('undangan_pernikahans')
+            ->select('undangan_pernikahans.*')
+            ->where('id_undangan', '=', $id)
+            ->get();
+
+        return view('order.pernikahan.undangan', [
+            'undangan' => $undangan,
+            'detail' => $detail
+        ]);
+    }
+
+    public function editPernikahan($id)
+    {
+        $undangan = DB::table('undangans')
+            ->where('id', '=', $id)
+            ->select('undangans.*')
+            ->get();
+
+        $detail = DB::table('undangan_pernikahans')
+            ->select('undangan_pernikahans.*')
+            ->where('id_undangan', '=', $id)
+            ->get();
+
+        return view('order.pernikahan.edit', [
+            'undangan' => $undangan,
+            'detail' => $detail
+        ]);
+    }
+
+    public function editUndanganPernikahan(Request $request, $id)
+    {
+        $undangan = Undangan::find($id);
+
+        $undangan->update([
+            'tanggal_mulai_acara' => $request['tanggal-mulai'],
+            'tanggal_berakhir_acara' => $request['tanggal-berakhir'],
+            'waktu_mulai_acara' => $request['waktu-mulai'],
+            'waktu_berakhir_acara' => $request['waktu-berakhir'],
+            'lokasi_acara' => $request['lokasi'],
+            'alamat_acara' => $request['alamat']
+        ]);
+
+        UndanganPernikahan::where('id_undangan', $id)->update([
+            'honorific_mempelai_lk' => $request['honorific-lk'],
+            'nama_mempelai_lk' => $request['nama-lengkap-lk'],
+            'orangtua_mempelai_lk' => $request['orangtua-lk'],
+            'deskripsi_mempelai_lk' => $request['deskripsi-lk'],
+            'honorific_mempelai_pr' => $request['honorific-pr'],
+            'nama_mempelai_pr' => $request['nama-lengkap-pr'],
+            'orangtua_mempelai_pr' => $request['orangtua-pr'],
+            'deskripsi_mempelai_pr' => $request['deskripsi-pr']
+        ]);
+
+        $request->session()->flash('sukses', 'Undangan berhasil diperbarui!');
+        return redirect()->route('undangan_pernikahan', [
+            'id' => $id
+        ]);
+    }
+
+    public function reviewPernikahan($id)
+    {
+        $data = DB::table('orders')
+            ->join('users', 'orders.id_user', '=', 'users.id')
+            ->join('undangans', 'orders.id', '=', 'undangans.id_order')
+            ->join('undangan_pernikahans', 'undangans.id', '=', 'undangan_pernikahans.id_undangan')
+            ->select('undangan_pernikahans.*')
+            ->where('undangans.id', '=', $id)
+            ->get();
+
+        return view('order.pernikahan.review', [
+            'data' => $data
+        ]);
+    }
+
+    public function reviewUndanganPernikahan(Request $request, $id)
+    {
+        $id_order = Undangan::where('id', $id)->select('id_order')->get();
+        // dd($request);
+        $data = Review::create([
+            'id_order' => $id_order[0]->id_order,
+            'nama_user_review' => $request['nama_lengkap'],
+            'isi_review' => $request['review'],
+            'rating' => $request['star']
+        ]);
+
+        return redirect('/review');
     }
 }

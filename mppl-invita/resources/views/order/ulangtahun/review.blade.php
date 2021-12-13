@@ -46,7 +46,7 @@
       </div>
     </div>
     
-    <form action="/order/review/{{ $data[0]->id_undangan }}" method="post">
+    <form action="/order/undangan/ulangtahun/review/{{ $data[0]->id_undangan }}" method="post">
       @csrf
     <div class="row mt-4">
         <div class="col-2 fs-3 fw-bold">

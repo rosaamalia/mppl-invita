@@ -59,47 +59,76 @@
   <div class="page-content">
 		<div class="wizard-v5-content">
 			<div class="wizard-form">
-		        <form class="form-register" id="form-register" action="/order/undangan/ulangtahun/{{ $undangan[0]->id }}/edit" method="post">
+		        <form class="form-register" id="form-register" action="/order/undangan/pernikahan/{{ $undangan[0]->id }}/edit" method="post">
               @csrf
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
-			            <h2>
-			            	  <span class="step-icon"><i class="zmdi zmdi-check"></i></span>
-                      <p style="position: absolute; z-index: 10; padding-left: 15px; padding-top: 5px; font-weight:700; color: white">1</p>
-			            	<span class="step-text">Edit Profil</span>
-			            </h2>
-			            <section>
+                <h2>
+                  <span class="step-icon"><i class="zmdi zmdi-check"></i></span>
+                  <p style="position: absolute; z-index: 10; padding-left: 15px; padding-top: 5px; font-weight:700; color: white">1</p>
+                  <span class="step-text">Lengkapi Profil</span>
+                </h2>
+                <section>
                     <div class="inner">
                       <p style="color: #044581; font-weight:700; font-size: 20px">Profil</p>
                     <div class="form-row">
                       <div class="form-holder" style="width: 300px">
-                        <label for="honorific">Nama Anda:</label>
-                        <select name="honorific" id="honorific" class="form-control">
-                          <option value="{{ $detail[0]->honorific_ulangtahun }}" selected>{{ $detail[0]->honorific_ulangtahun }}</option>
-                          <option value="Mr">Mr.</option>
+                        <label for="honorific-lk">Mempelai Pria:</label>
+                        <select name="honorific-lk" id="honorific-lk" class="form-control">
+                          <option value="{{ $detail[0]->honorific_mempelai_lk }}" selected>{{ $detail[0]->honorific_mempelai_lk }}</option>
                           <option value="Ms">Ms.</option>
                           <option value="Mrs">Mrs.</option>
                         </select>
                       </div>
                       <div class="form-holder" style="width: 100%">
-                        <label for="nama-lengkap" style="display: hidden; color: white">Label</label>
-                        <input type="text" placeholder="Tulis nama Anda" class="form-control input-step-2" id="nama-lengkap" name="nama-lengkap" value="{{ $detail[0]->nama_ulangtahun }}">
+                        <label for="nama-lengkap-lk" style="display: hidden; color: white">Label</label>
+                        <input type="text" placeholder="Tulis nama mempelai pria" class="form-control input-step-2" id="nama-lengkap-lk" name="nama-lengkap-lk" value="{{ $detail[0]->nama_mempelai_lk }}">
                         <span><i class="zmdi zmdi-search"></i></span>
-                      </div>
-                    </div>
-                    <div class="form-row" style="width: 300px">
-                      <div class="form-holder form-holder-2">
-                        <label for="tanggal-lahir">Kapan Ulang tahun Anda?</label>
-                        <input type="date" name="tanggal-lahir" class="email input-step-2-1" id="tanggal-lahir" value="{{ $detail[0]->tanggal_lahir_ulangtahun }}">
                       </div>
                     </div>
                     <div class="form-row">
                       <div class="form-holder form-holder-2">
-                        <input type="text" name="deskripsi" class="email input-step-2-1" id="deskripsi" placeholder="Isi biodata Anda semenarik mungkin..." value="{{ $detail[0]->deskripsi_ulangtahun }}">
+                        <label for="orangtua-lk">Nama Orang Tua Mempelai Pria:</label>
+                        <input type="text" name="orangtua-lk" class="email input-step-2-1" id="orangtua-lk" placeholder="Nama orang tua mempelai pria" value="{{ $detail[0]->orangtua_mempelai_lk }}">
                       </div>
                     </div>
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <label for="deskripsi-lk">Deskripsi Mempelai Pria:</label>
+                        <input type="text" name="deskripsi-lk" class="email input-step-2-1" id="deskripsi-lk" placeholder="Isi deskripsi mempelai pria..." value="{{ $detail[0]->deskripsi_mempelai_lk }}">
+                      </div>
+                    </div>
+
+                    {{-- wanita --}}
+                    <div class="form-row">
+                      <div class="form-holder" style="width: 300px">
+                        <label for="honorific-pr">Mempelai Wanita:</label>
+                        <select name="honorific-pr" id="honorific-pr" class="form-control">
+                          <option value="{{ $detail[0]->honorific_mempelai_pr }}" selected>{{ $detail[0]->honorific_mempelai_pr }}</option>
+                          <option value="Ms">Ms.</option>
+                          <option value="Mr">Mr.</option>
+                        </select>
+                      </div>
+                      <div class="form-holder" style="width: 100%">
+                        <label for="nama-lengkap-pr" style="display: hidden; color: white">Label</label>
+                        <input type="text" placeholder="Tulis nama mempelai wanita" class="form-control input-step-2" id="nama-lengkap-pr" name="nama-lengkap-pr" value="{{ $detail[0]->nama_mempelai_pr }}">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <label for="orangtua-pr">Nama Orang Tua Mempelai Wanita:</label>
+                        <input type="text" name="orangtua-pr" class="email input-step-2-1" id="orangtua-pr" placeholder="Nama orang tua mempelai wanita" value="{{ $detail[0]->orangtua_mempelai_pr }}">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <label for="deskripsi-pr">Deskripsi Mempelai Wanita:</label>
+                        <input type="text" name="deskripsi-pr" class="email input-step-2-1" id="deskripsi-pr" placeholder="Isi deskripsi mempelai wanita..." value="{{ $detail[0]->deskripsi_mempelai_pr }}">
+                      </div>
+                    </div>
+                    
                   </div>
-			            </section>
+                </section>
 						<!-- SECTION 2 -->
 			            <h2>
 			            	<span class="step-icon"><i class="zmdi zmdi-check"></i></span>

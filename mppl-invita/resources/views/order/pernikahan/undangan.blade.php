@@ -49,20 +49,30 @@
 <main class="m-5 d-flex justify-content-center">
 
     <div class="card" style="width: 90%;">
-        <img src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="card-img-top d-block img-fluid" style="height: 200px; object-fit: cover">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="card-img-top d-block img-fluid" style="height: 200px; object-fit: cover">
         <div class="card-body d-flex flex-column justify-content-center align-items-center m-5">
-            <p style="color: #0199FF; font-size: 24px; font-weight: 700">Ulang Tahun {{ $detail[0]->nama_ulangtahun }} 🎈</p>
-            <p style="font-size: 20px;">Undangan Ulang Tahun</p>
+            <p style="color: #0199FF; font-size: 24px; font-weight: 700">Pernikahan {{ $detail[0]->nama_mempelai_lk }} dan {{ $detail[0]->nama_mempelai_pr }}</p>
+            <p style="font-size: 20px;">Undangan Pernikahan</p>
             <p style="font-size: 16px">Tanggal: {{ $undangan[0]->tanggal_mulai_acara }}</p>
             <p style="font-size: 16px">Tempat: {{ $undangan[0]->lokasi_acara }}, {{ $undangan[0]->alamat_acara }}</p>
             <p style="font-size: 16px">Waktu: {{ $undangan[0]->waktu_mulai_acara }}</p>
 
             <hr class="m-5" style="border-top: 1px; border-color: #b3b3b3; border-style: solid; width: 100%">
 
-            <p style="width: 70%; text-align: center; font-size: 16px">{{ $detail[0]->deskripsi_ulangtahun }}</p>
+            <p style="color: #0199FF; font-size: 24px; font-weight: 700">Detail Undangan</p>
 
-            <div class="row-12">
-                <a href="/order/undangan/ulangtahun/{{ $undangan[0]->id }}/preview" class="btn btn-primary m-2 px-4 shadow border-0" style="background: white; color:#0199ff; font-size: 16px;">Preview</a>
+            <p style="width: 70%; text-align: center; font-size: 16px"><strong>{{ $detail[0]->nama_mempelai_lk }}</strong></p>
+            <p style="width: 70%; text-align: center; font-size: 14px">Putra dari {{ $detail[0]->orangtua_mempelai_lk }}</p>
+            <p style="width: 70%; text-align: center; font-size: 16px">{{ $detail[0]->deskripsi_mempelai_lk }}</p>
+
+            <p style="width: 70%; text-align: center; font-size: 16px; opacity: 0.5">dan</p>
+
+            <p style="width: 70%; text-align: center; font-size: 16px"><strong>{{ $detail[0]->nama_mempelai_pr }}</strong></p>
+            <p style="width: 70%; text-align: center; font-size: 14px">Putri dari {{ $detail[0]->orangtua_mempelai_pr }}</p>
+            <p style="width: 70%; text-align: center; font-size: 16px">{{ $detail[0]->deskripsi_mempelai_pr }}</p>
+
+            <div class="row-12 mt-5">
+                <a href="/order/undangan/pernikahan/{{ $undangan[0]->id }}/preview" class="btn btn-primary m-2 px-4 shadow border-0" style="background: white; color:#0199ff; font-size: 16px;">Preview</a>
                 <a href="/order/pembayaran" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Publish</a>
             </div>
 
@@ -72,7 +82,7 @@
                 <div class="card justify-content-center" style="width: 18rem;">
                     <img src="/img/edit-data-undangan.png" class="card-img-top p-5" alt="..." style="height: 18rem; object-fit: cover">
                     <div class="card-body">
-                      <a href="/order/undangan/ulangtahun/{{ $undangan[0]->id }}/edit" class="btn btn-primary shadow border-0" style="font-size: 14px; background:#0199ff;">Edit Data Undangan</a>
+                      <a href="/order/undangan/pernikahan/{{ $undangan[0]->id }}/edit" class="btn btn-primary shadow border-0" style="font-size: 14px; background:#0199ff;">Edit Data Undangan</a>
                     </div>
                   </div>
                   <div class="card d-flex justify-content-center" style="width: 18rem;">
