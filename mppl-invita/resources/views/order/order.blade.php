@@ -53,7 +53,8 @@
         <h1 class="fw-normal" style="color: #0199ff; font-size: 32px;"><strong>Pesan</strong> Sekarang</h1>
         <p class="lead text-muted" style="font-size: 14px;">Buat Undangan Digital Anda sekarang. Baik undangan pernikahan, undangan ulang tahun, atau undangan untuk kegiatan lain! Buat undangan yang memudahkan anda untuk berbagi informasi kepada tamu anda dan tentunya ramah lingkungan.</p>
         <p>
-          <a href="/order/buat" class="btn btn-primary my-2 px-5 shadow border-0" style="background: white; color:#0199ff;font-size: 16px;">Buat Undangan</a>
+          <a href="/order/buat" class="btn btn-primary m-2 px-5 shadow border-0" style="background: white; color:#0199ff;font-size: 16px;">Buat Undangan</a>
+          <a href="/order/harga" class="btn btn-primary m-2 px-5 shadow border-0" style="background: #0199ff; color: white;font-size: 16px;">Lihat Daftar Harga</a>
         </p>
       </div>
     </div>

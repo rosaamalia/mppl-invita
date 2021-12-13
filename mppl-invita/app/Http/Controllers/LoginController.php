@@ -22,7 +22,7 @@ class LoginController extends Controller
         if (Auth::attempt(($credentials))) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/order');
+            return redirect()->intended('/');
         }
 
         $request->session()->flash('gagal', 'Masuk ke akun gagal. Email atau password salah.');

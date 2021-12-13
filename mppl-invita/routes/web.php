@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [function () {
     return view('index');
-}]);
+}])->name('index');
 
 Route::get('/portfolio', [function () {
     return view('portfolio');
@@ -47,6 +47,9 @@ Route::name('order')->prefix('order')->group(function () {
     Route::get('/undangan/{id}/edit', [OrderController::class, 'edit'])->middleware('auth');
     Route::post('/undangan/{id}/edit', [OrderController::class, 'editUndangan']);
     Route::get('/undangan/{id}/preview', [OrderController::class, 'preview'])->middleware('auth');
+    Route::get('/harga', [function () {
+        return view('harga');
+    }]);
 });
 
 Route::get('/order/undangan/{id}', [OrderController::class, 'detail'])->middleware('auth')->name('undangan');
@@ -54,7 +57,3 @@ Route::get('/order/undangan/{id}', [OrderController::class, 'detail'])->middlewa
 Route::get('/akun', [function () {
     return view('akun');
 }])->name('akun');
-
-Route::get('/harga', [function () {
-    return view('harga');
-}])->name('harga');
