@@ -104,6 +104,15 @@
                 <p class="fs-3 fw-bolder style="color : #044581"><strong>Total Tagihan</strong></p>
                 <p class="fs-4 fw-bolder" style="color : #DF3C4F; margin-top : -5px"><strong>IDR 195.000,-</strong></p>
             </div>
+            <div class="col-1  ">
+                <button
+                type="button"
+                class="btn button border-0 py-3 bg-danger text-white w-100 fs-3 fw-bolder"
+                style="border-radius: 10px; "
+                >
+                Batal
+            </button>
+            </div>
             <div class="col-3 ">
                 <button
                 type="button"
