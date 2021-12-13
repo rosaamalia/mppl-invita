@@ -80,3 +80,7 @@ Route::get('/order/pembayaran', [function () {
 Route::get('/order/bukutamu', [function () {
     return view('order.bukutamu');
 }])->name('bukutamu');
+
+Route::get('/order/pernikahan/preview', [function () {
+    return view('order.pernikahan.preview');
+}])->name('pembayaran');

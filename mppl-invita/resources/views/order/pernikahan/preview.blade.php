@@ -43,18 +43,18 @@
     </style>
 
     </head>
-    <body style="background-color: #FEDCDB">
+    <body style="background-color: #FCB2A9">
 
         <nav class="navbar fixed-top" style="background-color: #0199ff;">
-            <div class="container-fluid">
-                <a type="button" class="btn border-0 mx-3" href="/order/undangan/ulangtahun/{{ $undangan[0]->id }}" style="background: white; color: #0199ff; font-size: 14px; font-weight: 500">Kembali</a>
+            <div class="container-fluid">   
+                <a type="button" class="btn border-0 mx-3" href="" style="background: white; color: #0199ff; font-size: 14px; font-weight: 500">Kembali</a>
                 <a class="navbar-brand ms-0" style="color: white"><strong>Invita.</strong>id | <span style="font-size: 15px">Preview Undangan</span></a>
             </div>
         </nav>
 
         <main>
             <header>
-                <nav class="navbar navbar-expand-lg navbar-dark px-3" style="background: #FE6694">
+                <nav class="navbar navbar-expand-lg navbar-dark px-3" style="background: #989ca0">
                     <div class="container-fluid">
                         <a class="navbar-brand ms-0" style="color: white"><strong>Undangan</strong></a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,11 +77,11 @@
                   </nav>
               </header>
               
-                <section class="py-5 text-center container-fluid mx-0" style="background: url(/img/background-ulangtahun.png); background-repeat: no-repeat; background-size: 100vw; color: white">
+                <section class="py-5 text-center container-fluid mx-0" style="background: url(/img/background-pernikahan.png); background-position: center center; at: no-repeat; background-size: 100vw; color: white">
                   <div class="row-12 py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
                         <p class="lead" style="font-size: 15px">Ulang Tahun ke-[umur]</p>
-                      <h1 class="fw-light">{{ $detail[0]->nama_ulangtahun }}</h1>
+                      <h1 class="fw-light"></h1>
                       <hr class="my-3" style="border-top: 1px; border-color: #b3b3b3; border-style: solid; width: 100%">
                       <p class="lead">Wishing you a day filled with happiness and a year filled with joy. Happy birthday!</p>
                     </div>
@@ -92,20 +92,20 @@
                     <div class="card my-5 shadow-sm" style="width: 80vw;">
                         <div class="row g-0">
                           <div class="col-md-4">
-                            <img src="/img/ulangtahun-tentangku.jpg" class="img-fluid rounded-start" alt="...">
+                            <img src="/img/pernikahan-tentangku.jpg" class="img-fluid rounded-start" alt="...">
                           </div>
                           <div class="col-md-8 p-3">
                             <div class="card-body">
                               <h5 class="card-title">Tentangku</h5>
-                              <p class="card-text">Halo, namaku {{ $detail[0]->nama_ulangtahun }}! 🎈 <br> Ini adalah ulang tahunku yang ke-[umur].</p>
-                              <p class="card-text">{{ $detail[0]->deskripsi_ulangtahun }}</p>
+                              <p class="card-text">Halo, namaku ! 🎈 <br> Ini adalah ulang tahunku yang ke-[umur].</p>
+                              <p class="card-text"></p>
                             </div>
                           </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="p-5 my-3 d-flex justify-content-center align-items-center flex-column" style="background-color: #FEB1B7" id="jadwal">
+                <section class="p-5 my-3 d-flex justify-content-center align-items-center flex-column" style="background-color: #fffff8" id="jadwal">
                     <div class="row">
                         <h2>Perayaan Ulang Tahun 🎂</h2>
                     </div>
@@ -114,20 +114,20 @@
                     <table>
                         <tr>
                             <td style="width: 150px"><strong>Hari dan Tanggal</strong></td>
-                            <td style="width: 240px">{{ $undangan[0]->tanggal_mulai_acara }}</td>
+                            <td style="width: 240px"></td>
                         </tr>
                         <tr>
                             <td style="width: 150px"><strong>Waktu</strong></td>
-                            <td style="width: 240px">{{ $undangan[0]->waktu_mulai_acara }} - {{ $undangan[0]->waktu_berakhir_acara }}</td>
+                            <td style="width: 240px"></td>
                         </tr>
                         <tr>
                             <td style="width: 150px"><strong>Tempat</strong></td>
-                            <td style="width: 240px">{{ $undangan[0]->lokasi_acara }}, {{ $undangan[0]->alamat_acara }}</td>
+                            <td style="width: 240px"></td>
                         </tr>
                     </table>
                 </section>
 
-                <section class="py-5 text-center container-fluid mx-0" style="background: url(/img/background-bukutamu.png); background-repeat: no-repeat; background-size: 100vw; color: white; margin: 100px;" id="bukutamu">
+                <section class="py-5 text-center container-fluid mx-0" style="background: url(/img/background-bukutamu-pernikahan.png), linear-gradient(#eb01a5, #d13531);; background-repeat: no-repeat;  background-position : center center; background-size: 100vw; color: white; margin: 100px;" id="bukutamu">
                     <div class="row-12 py-lg-5">
                       <div class="col-lg-8 col-md-8 mx-auto">
                         <h1 class="fw-light">Buku Tamu</h1>
