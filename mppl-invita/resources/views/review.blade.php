@@ -59,13 +59,13 @@
               class="img-fluid" style="border-radius: 50px; width: 100px" alt="...">
           </div>
           <div class="col-md-10 p-5">
-            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <h5 class="card-title fs-2">{{ $item->nama_user_review }}</h5>
-              <p class="card-text"><small class="text-muted">{{ $item->username }}</small></p>
-              <p class="card-text" style="text-align: center">{{ $item->isi_review }}</p>
+            <div class="card-body">
+              <h5 class="card-title fs-1">{{ $item->nama_user_review }}</h5>
+              <p class="card-text fs-3"><small class="text-muted">{{ $item->username }}</small></p>
+              <p class="card-text fs-2" style="">{{ $item->isi_review }}</p>
               <div class="row-12">
                 @for($i=0; $i<$item->rating; $i++)
-                <i class="bi bi-star-fill" style="color: #FDCC0D"></i>
+                <i class="bi bi-star-fill fs-3" style="color: #FDCC0D"></i>
                 @endfor
               </div>
             </div>
