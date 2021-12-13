@@ -48,16 +48,7 @@
                 <div class="row justify-content-center">
                   <div class="col-xl-6 col-lg-8 col-md-8">
                     <div class="img pb-5">
-                      <img src="img/slide-1-jb.png" class="img-fluid" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row justify-content-center">
-                  <div class="col-xl-6 col-lg-8 col-md-8">
-                    <div class="img pb-5">
-                      <img src="img/slide-1-jb.png" class="img-fluid" alt="" />
+                      <img src="img/slide-2-jb.png" class="img-fluid" alt="" />
                     </div>
                   </div>
                 </div>
@@ -113,9 +104,40 @@
             <button type="button" class="btn btn-light fw-bold p-3 ps-5 pe-5" style="color: #0199ff; font-size: 2.8rem">Buat Undanganmu Sekarang</button>
           </div>
         </div>
-        <img class="couple img-fluid position-sticky d-lg-block d-none" src="img/jb-img.png" alt="" style="border-radius: 0 0 0 200px" />
+        <div id="jb-carousel" class="carousel slide couple img-fluid position-absolute d-lg-block d-none" data-bs-ride="carousel" style="left : 100px; border-radius: 0 0 0 200px">
+            <div class="carousel-inner" style="">
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="col-xl-6 col-lg-8 col-md-8">
+                    <div class="img pb-5">
+                      <img src="img/jb-img.png" class="img-fluid" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-xl-6 col-lg-8 col-md-8">
+                    <div class="img pb-5">
+                      <img src="img/jb-2-img.png" class="img-fluid" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev d-md-block d-none position-absolute" type="button" data-bs-target="#jb-carousel" data-bs-slide="prev" style="top: -500px">
+              <span class="carousel-control-prev-icon bg-primary rounded-3" aria-hidden="true" style="background-size: 3.2rem; width: 3.2rem; height: 3.2rem"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next d-md-block d-none position-absolute" type="button" data-bs-target="#jb-carousel" data-bs-slide="next" style="top: -500px">
+              <span class="carousel-control-next-icon bg-primary rounded-3" aria-hidden="true" style="background-size: 3.2rem; width: 3.2rem; height: 3.2rem"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <!-- <img class="couple img-fluid position-sticky d-lg-block d-none" src="img/jb-img.png" alt="" style="border-radius: 0 0 0 200px" /> -->
       </div>
-      <div class="row" style="margin-top: -80px">
+      <div class="row position-sticky" style="margin-top: -80px">
         <div class="col-12">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -178,7 +200,7 @@
               <div class="card-head position-relative">
                 <img src="img/porto1.png" class="card-img-top" alt="..." />
                 <div class="overlay"></div>
-                <div class="button d-flex justify-content-center"><a href="#" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
+                <div class="button d-flex justify-content-center"><a href="https://invita.id/constellation/home/KnOjnROxiJM76AyiSz6H" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
               </div>
               <div class="card-body">
                 <h5 class="card-title fw-bolder" style="font-size: 2rem">Constelation</h5>
@@ -189,12 +211,12 @@
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card border-0 mx-auto my-5 shadow" style="width: 30rem">
               <div class="card-head position-relative">
-                <img src="img/porto1.png" class="card-img-top" alt="..." />
+                <img src="img/porto2.png" class="card-img-top" alt="..." />
                 <div class="overlay"></div>
-                <div class="button d-flex justify-content-center"><a href="#" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
+                <div class="button d-flex justify-content-center"><a href="https://invita.id/vibrantrustic/home/5VvNkneuZpRlQyfRcYOM" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bolder" style="font-size: 2rem">Constelation</h5>
+                <h5 class="card-title fw-bolder" style="font-size: 2rem">Vibrant Rustic</h5>
                 <p class="card-text fw-bold" style="color: #0199ff; font-size: 1.6rem">Basic</p>
               </div>
             </div>
@@ -202,12 +224,12 @@
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card border-0 mx-auto my-5 shadow" style="width: 30rem">
               <div class="card-head position-relative">
-                <img src="img/porto1.png" class="card-img-top" alt="..." />
+                <img src="img/porto3.png" class="card-img-top" alt="..." />
                 <div class="overlay"></div>
-                <div class="button d-flex justify-content-center"><a href="#" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
+                <div class="button d-flex justify-content-center"><a href="https://invita.id/winterromance/home/lmcFYURZIrTdiTnEgga9" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bolder" style="font-size: 2rem">Constelation</h5>
+                <h5 class="card-title fw-bolder" style="font-size: 2rem">Winter Romance</h5>
                 <p class="card-text fw-bold" style="color: #0199ff; font-size: 1.6rem">Basic</p>
               </div>
             </div>
@@ -216,39 +238,39 @@
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card border-0 mx-auto my-5 shadow" style="width: 30rem">
               <div class="card-head position-relative">
-                <img src="img/porto1.png" class="card-img-top" alt="..." />
+                <img src="img/porto4.png" class="card-img-top" alt="..." />
                 <div class="overlay"></div>
-                <div class="button d-flex justify-content-center"><a href="#" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
+                <div class="button d-flex justify-content-center"><a href="https://invita.id/classymarble/home/iM68XBFMLAu3hT9CF5qS" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bolder" style="font-size: 2rem">Constelation</h5>
-                <p class="card-text fw-bold" style="color: #0199ff; font-size: 1.6rem">Basic</p>
+                <h5 class="card-title fw-bolder" style="font-size: 2rem">Classy Marble</h5>
+                <p class="card-text fw-bold" style="color: #0199ff; font-size: 1.6rem">Premium</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card border-0 mx-auto my-5 shadow" style="width: 30rem">
               <div class="card-head position-relative">
-                <img src="img/porto1.png" class="card-img-top" alt="..." />
+                <img src="img/porto5.png" class="card-img-top" alt="..." />
                 <div class="overlay"></div>
-                <div class="button d-flex justify-content-center"><a href="#" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
+                <div class="button d-flex justify-content-center"><a href="https://invita.id/sweetbotanical/home/qzcpcOKZdYxOYcnibHGx" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bolder" style="font-size: 2rem">Constelation</h5>
-                <p class="card-text fw-bold" style="color: #0199ff; font-size: 1.6rem">Basic</p>
+                <h5 class="card-title fw-bolder" style="font-size: 2rem">Sweet Botanical</h5>
+                <p class="card-text fw-bold" style="color: #0199ff; font-size: 1.6rem">Premium</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card border-0 mx-auto my-5 shadow" style="width: 30rem">
               <div class="card-head position-relative">
-                <img src="img/porto1.png" class="card-img-top" alt="..." />
+                <img src="img/porto6.png" class="card-img-top" alt="..." />
                 <div class="overlay"></div>
-                <div class="button d-flex justify-content-center"><a href="#" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
+                <div class="button d-flex justify-content-center"><a href="https://invita.id/mistygold/home/QSAaq2tAQmegkfEP5bIu" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Preview</a></div>
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bolder" style="font-size: 2rem">Constelation</h5>
-                <p class="card-text fw-bold" style="color: #0199ff; font-size: 1.6rem">Basic</p>
+                <h5 class="card-title fw-bolder" style="font-size: 2rem">Rising Star</h5>
+                <p class="card-text fw-bold" style="color: #0199ff; font-size: 1.6rem">Premium</p>
               </div>
             </div>
           </div>

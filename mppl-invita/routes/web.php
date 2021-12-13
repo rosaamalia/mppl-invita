@@ -36,6 +36,10 @@ Route::get('/blog', [function () {
     return view('blog');
 }])->name('blog');
 
+Route::get('/faq', [function () {
+    return view('faq');
+}])->name('faq');
+
 Route::name('order')->prefix('order')->group(function () {
     Route::get('/', [OrderController::class, 'index'])->middleware('auth');
     Route::get('/buat', [OrderController::class, 'buat'])->middleware('auth');
@@ -46,3 +50,11 @@ Route::name('order')->prefix('order')->group(function () {
 });
 
 Route::get('/order/undangan/{id}', [OrderController::class, 'detail'])->middleware('auth')->name('undangan');
+
+Route::get('/akun', [function () {
+    return view('akun');
+}])->name('akun');
+
+Route::get('/harga', [function () {
+    return view('harga');
+}])->name('harga');
