@@ -66,7 +66,7 @@
                 </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body fs-3">
+                <div class="accordion-body mt-5 mb-5 fs-3">
                     <strong class="">Melalui Pop-Up Reminder</strong>
                     <p class="mt-4 mb-5">1. Buka Website <span><a href="www.invita.id">www.invita.id</a></span> , akan muncul pop up seperti gambar dibawah ketika anda mengunjungi website</p>
                     <img class="mb-5" src="img/faq-1a.png" alt="">
@@ -92,8 +92,138 @@
                 </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body fs-3">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body fs-3</code>, though the transition does limit overflow.
+                <div class="accordion-body mt-5 mb-5 fs-3">
+                    <div class="row row-harga justify-content-center">
+          <div class="col-harga col-xxl-2 col-lg-3 col-sm-6 col-7 ps-0 pe-0 me-5 overflow-hidden" style="border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px">
+            <div class="row pt-5 text-center" style="background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)">
+              <h2 class="text-white fw-bold">BASIC</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L1440,96L1440,320L0,320Z"></path></svg>
+            </div>
+
+            <div class="row text-center">
+              <h3 class="fs-1">IDR <strong>195K</strong></h3>
+            </div>
+            <div class="row text-center" style="font-size: 1.2rem">
+              <p>Pilih Jumlah Tamu</p>
+            </div>
+            <div class="row mx-auto w-75 mb-5" style="font-size: 1.5rem">
+              <ul>
+                <li>Countdown Timer</li>
+                <li>Foto Cover</li>
+                <li>Detail Jadwal Acara</li>
+                <li>Google Maps</li>
+                <li>Wedding Team</li>
+                <li>Registry</li>
+              </ul>
+            </div>
+            <div class="row justify-content-center mb-5" style="font-size: 1.5rem">
+              <div class="col-5 p-0 m-0">
+                <button
+                  type="button"
+                  class="btn border-0 pt-2 pb-2 text-white w-100 fs-3 fw-bolder"
+                  style="border-radius: 10px; background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)"
+                >
+                  Get This
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-harga col-xxl-2 col-lg-3 col-sm-6 col-7 ps-0 pe-0 me-5 overflow-hidden"
+            style="
+              border-radius: 8px;
+              box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+              background: rgb(34, 122, 255);
+              background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%);
+            "
+          >
+            <div class="row bg-white pt-5 text-center" style="padding-bottom: 25px; border-radius: 0 0 100% 100%">
+              <h2 class="fw-bold" style="color: rgb(34, 122, 255); color: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)">PREMIUM</h2>
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ccc" fill-opacity="1" d="M0,128L120,149.3C240,171,480,213,720,213.3C960,213,1200,171,1320,149.3L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+              </svg> -->
+            </div>
+
+            <div class="row text-center" style="padding-top: 25px">
+              <h3 class="fs-1" style="color: white">IDR <strong>2000K</strong></h3>
+            </div>
+            <div class="row text-center" style="font-size: 1.2rem; color: white">
+              <p>Undangan Unlimited</p>
+            </div>
+            <div class="row mx-auto w-75 mb-5" style="font-size: 1.5rem; color: white">
+              <ul>
+                <li>Countdown Timer</li>
+                <li>Foto Cover</li>
+                <li>Detail Jadwal Acara</li>
+                <li>Google Maps</li>
+                <li>Wedding Team</li>
+                <li>Registry</li>
+                <li>Premium Template</li>
+                <li>Galeri Foto</li>
+                <li>Wedding Story</li>
+                <li>Wedding Video</li>
+                <li>Bridesmaid and Bestmen</li>
+                <li>Wedding Wish</li>
+              </ul>
+            </div>
+            <div class="row justify-content-center mb-5" style="font-size: 1.5rem">
+              <div class="col-5 p-0 m-0">
+                {{-- <button
+                  type="button"
+                  class="btn border-0 pt-2 pb-2 text-white w-100 fs-3 fw-bolder"
+                  style="border-radius: 10px; background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)"
+                >
+                  Get This
+                </button> --}}
+              </div>
+            </div>
+          </div>
+          <div class="col-harga col-xxl-2 col-lg-3 col-sm-6 col-7 ps-0 pe-0 me-5 overflow-hidden" style="border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px">
+            <div class="row pt-3 pb-0 text-center" style="background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)">
+              <h2 class="text-white fw-bold">CHECK IN</h2>
+              <h2 class="text-white">SYSTEM</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L1440,96L1440,320L0,320Z"></path></svg>
+            </div>
+
+            <div class="row text-center" style="margin-top: -10px">
+              <h3 class="fs-1">IDR <strong>3500K</strong></h3>
+            </div>
+            <div class="row text-center" style="font-size: 1.2rem">
+              <p>Undangan Unlimited</p>
+            </div>
+            <div class="row mx-auto w-75 mb-5" style="font-size: 1.5rem">
+              <ul>
+                <li>Countdown Timer</li>
+                <li>Foto Cover</li>
+                <li>Detail Jadwal Acara</li>
+                <li>Google Maps</li>
+                <li>Wedding Team</li>
+                <li>Registry</li>
+                <li>Premium Template</li>
+                <li>Galeri Foto</li>
+                <li>Wedding Story</li>
+                <li>Wedding Video</li>
+                <li>Bridesmaid and Bestmen</li>
+                <li>Wedding Wish</li>
+                <li>QR Code Scanner</li>
+                <li>Virtual Angpao</li>
+                <li>Virtual Check-In</li>
+                <li>Tablet & Printer</li>
+              </ul>
+            </div>
+            <div class="row justify-content-center mb-5" style="font-size: 1.5rem">
+              <div class="col-5 p-0 m-0">
+                {{-- <button
+                  type="button"
+                  class="btn border-0 pt-2 pb-2 text-white w-100 fs-3 fw-bolder"
+                  style="border-radius: 10px; background: rgb(34, 122, 255); background: linear-gradient(180deg, rgba(34, 122, 255, 1) 0%, rgba(95, 213, 251, 1) 100%)"
+                >
+                  Get This
+                </button> --}}
+              </div>
+            </div>
+          </div>
+        </div>
                 </div>
                 </div>
             </div>
