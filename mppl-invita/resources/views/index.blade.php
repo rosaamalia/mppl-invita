@@ -96,8 +96,8 @@
         <div class="row pt-4">
           <div class="col-lg-6 col-12">
             <p class="fw-normal" style="letter-spacing: 1px; font-size: 2.4rem">
-              Jadikan undangan pernikahan anda berbeda dan lebih istimewa dibandingkan pasangan lain. Undangan pernikahan anda akan tampil di website dan bisa diakses oleh tamu anda dari mana saja. Dengan fitur-fitur yang user friendly dan
-              lengkap, anda juga akan mendapatkan website pernikahan setema dengan undangan anda.
+              Jadikan undangan acara anda berbeda dan lebih istimewa dibandingkan acara lainnya. Undangan acara anda akan tampil di website dan bisa diakses oleh tamu anda dari mana saja. Dengan fitur-fitur yang user friendly dan
+              lengkap, anda juga akan mendapatkan website acara setema dengan undangan anda.
             </p>
           </div>
         </div>
@@ -301,7 +301,7 @@
           </div>
           <div class="row overflow-visible position-absolute align-items-center justify-content-center" style="left: 8%; height: 100%; width: 85%">
             <div class="col-12" style="height: fit-content">
-              <div id="carouselReviewIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div id="carouselReviewIndicators" class="carousel slide overflow-visible " data-bs-ride="carousel">
                 <div class="carousel-inner" style="">
                   <div class="carousel-item active">
                     <div class="row justify-content-center">
@@ -311,47 +311,39 @@
                         </div>
                         <h5 style="font-size: 2rem"><strong>Ira Feng</strong></h5>
                         <p style="font-size: 1.6rem">
-                          Ini slide 1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae nam odit at numquam velit necessitatibus, similique delectus accusantium a adipisci inventore libero sapiente beatae unde nostrum
-                          omnis perspiciatis dolorum voluptas?
+                          Invita is so helpful for us to invite our guests to our special day. I really recommend Invita as digital invitation for your event. We're impressed with Invita's service and We dare say you'll be pleased with the experience too! Invita's digital invitation is elegant, easy to send out and what's great is that it's environmentally friendly! Let's save earth from
+                          Global warming :)
                         </p>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="row justify-content-center">
-                      <div class="col-xl-6 col-lg-8 col-12">
+                      <div class="col-xl-8 col-lg-8 col-12">
                         <div class="img pb-5">
-                          <img src="img/photo-review-1.png" class="img-fluid shadow position-sticky rounded-circle" alt="" style="width: 100px; margin-top: 20px" />
+                          <img src="img/photo-review-2.png" class="img-fluid shadow position-sticky rounded-circle" alt="" style="width: 100px; margin-top: 0px" />
                         </div>
-                        <h5 style="font-size: 2rem"><strong>Ira Feng</strong></h5>
+                        <h5 style="font-size: 2rem"><strong>Fredy Wong</strong></h5>
                         <p style="font-size: 1.6rem">
-                          Ini slide 2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae nam odit at numquam velit necessitatibus, similique delectus accusantium a adipisci inventore libero sapiente beatae unde nostrum
-                          omnis perspiciatis dolorum voluptas?
+                          Thanks Invita.id for the great support in making us easier to share our digital invitation to our lovely guest. We can share any of our wedding vibe just put everything inside the
+                          invitation. It can be theme-customized with all data for couples such as; our love story, our prewed photography, our guest list reservations, wishes and still so many thigs to
+                          add. Thanks for made it happened!
                         </p>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="row justify-content-center">
-                      <div class="col-xl-6 col-lg-8 col-12">
+                      <div class="col-xl-8 col-lg-8 col-12">
                         <div class="img pb-5">
-                          <img src="img/photo-review-1.png" class="img-fluid shadow position-sticky rounded-circle" alt="" style="width: 100px; margin-top: 20px" />
+                          <img src="img/photo-review-3.png" class="img-fluid shadow position-sticky rounded-circle" alt="" style="width: 100px; margin-top: 0px" />
                         </div>
-                        <h5 style="font-size: 2rem"><strong>Ira Feng</strong></h5>
+                        <h5 style="font-size: 2rem"><strong>Sasti Cantika</strong></h5>
                         <p style="font-size: 1.6rem">
-                          Ini slide 3. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae nam odit at numquam velit necessitatibus, similique delectus accusantium a adipisci inventore libero sapiente beatae unde nostrum
-                          omnis perspiciatis dolorum voluptas?
+                          Kepikiran untuk buat undangan online, tapi mikir gimana cara nyebarinnya biar online, tapi tetep terasa private-nya. Supaya kesannya ngak asal sebar, jadi yang diundang pun merasa penting. Ternyata eh ternyata di jaman semua semua serba digital ini, kebutuhan itu udah dicover sama Invita. Jadi itungannya juga lebih irit untuk orang-orang yang tinggal di luar kota tapi pengen kita undang. Tinggal kirim undangan
+                          digital, gak perlu lagi kirim kirim via pos.
                         </p>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row" id="indicators" style="">
-                  <div class="">
-                    <div class="carousel-indicators" style="">
-                      <button type="button" data-bs-target="#carouselReviewIndicators" data-bs-slide-to="0" class="active bg-primary" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselReviewIndicators" data-bs-slide-to="1" class="bg-primary" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselReviewIndicators" data-bs-slide-to="2" class="bg-primary" aria-label="Slide 3"></button>
                     </div>
                   </div>
                 </div>
@@ -475,7 +467,7 @@
               </div>
               <div class="row text-start mt-lg-4 mt-4">
                 <div class="col-12">
-                  <button type="button" class="btn btn-primary ps-4 pe-4 pb-2 pt-2 fs-4" style="border-radius: 10px">Kirim Pesan</button>
+                  <button type="button" class="btn btn-primary ps-4 pe-4 pb-2 pt-2 fs-4" style="border-radius: 10px" onclick="window.location.href='/'">Kirim Pesan</button>
                 </div>
               </div>
             </form>
@@ -540,7 +532,7 @@
               </div>
               <div class="row text-start mt-lg-4 mt-4">
                 <div class="col-12">
-                  <button type="button" class="btn btn-primary ps-4 pe-4 pb-2 pt-2 fs-4" style="border-radius: 10px">Kirim Pesan</button>
+                  <button type="button" class="btn btn-primary ps-4 pe-4 pb-2 pt-2 fs-4" onclick="window.location.href='/'" style="border-radius: 10px">Kirim Pesan</button>
                 </div>
               </div>
             </form>
