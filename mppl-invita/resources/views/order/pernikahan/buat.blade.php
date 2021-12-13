@@ -52,7 +52,7 @@
   <div class="page-content">
 		<div class="wizard-v5-content">
 			<div class="wizard-form">
-		        <form class="form-register" id="form-register" action="/order/buat" method="post">
+		        <form class="form-register" id="form-register" action="/order/buat/ulangtahun" method="post">
               @csrf
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
@@ -64,7 +64,7 @@
 			            <section>
 			                <div class="inner">
                         <h4 style="color: #044581">Step 1</h4>
-                        <p style="color: #044581; font-weight:700; font-size: 20px">Pilih Tema Undangan Ulangtahun</p>
+                        <p style="color: #044581; font-weight:700; font-size: 20px">Pilih Tema Undangan Pernikahan</p>
                         <div class="form-row">
                           <div id="radio" style="font-size: 16px">
                               <input type="radio" name="jenis" value="basic"><strong>Basic</strong> - Mulai dari IDR 195.000
@@ -73,8 +73,8 @@
                         </div>
 
                         <div class="form-row my-3">
-                          <img src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="img-fluid" style="width: 100%; height: 150px; object-fit: cover; padding: 0 10px"></img>
-                          <img src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="img-fluid" style="width: 100%; height: 150px; object-fit: cover; padding: 0 10px"></img>
+                          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="img-fluid" style="width: 100%; height: 150px; object-fit: cover; padding: 0 10px"></img>
+                          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="img-fluid" style="width: 100%; height: 150px; object-fit: cover; padding: 0 10px"></img>
                         </div>
                       
                     
@@ -92,30 +92,61 @@
                         <p style="color: #044581; font-weight:700; font-size: 20px">Profil</p>
                       <div class="form-row">
                         <div class="form-holder" style="width: 300px">
-                          <label for="honorific">Nama Anda:</label>
-                          <select name="honorific" id="honorific" class="form-control">
+                          <label for="honorific-lk">Nama Mempelai Pria</label>
+                          <select name="honorific-lk" id="honorific-lk" class="form-control">
                             <option value="mr" selected>Mr.</option>
                             <option value="ms">Ms.</option>
                             <option value="mrs">Mrs.</option>
                           </select>
                         </div>
                         <div class="form-holder" style="width: 100%">
-                          <label for="nama-lengkap" style="display: hidden; color: white">Label</label>
-                          <input type="text" placeholder="Tulis nama Anda" class="form-control input-step-2" id="nama-lengkap" name="nama-lengkap">
+                          <label for="nama-lengkap-lk" style="display: hidden; color: white">Label</label>
+                          <input type="text" placeholder="Tulis nama Anda" class="form-control input-step-2" id="nama-lengkap-lk" name="nama-lengkap-lk">
                           <span><i class="zmdi zmdi-search"></i></span>
-                        </div>
-                      </div>
-                      <div class="form-row" style="width: 300px">
-                        <div class="form-holder form-holder-2">
-                          <label for="tanggal-lahir">Kapan Ulang tahun Anda?</label>
-                          <input type="date" name="tanggal-lahir" class="email input-step-2-1" id="tanggal-lahir">
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-holder form-holder-2">
-                          <input type="text" name="deskripsi" class="email input-step-2-1" id="deskripsi" placeholder="Isi biodata Anda semenarik mungkin...">
+                          <label for="orangtua-lk">Nama Orang Tua Mempelai Pria</label>
+                          <input type="text" name="orangtua-lk" class="email input-step-2-1" id="orangtua-lk" placeholder="Nama orang tua mempelai pria">
                         </div>
                       </div>
+                      <div class="form-row">
+                        <div class="form-holder form-holder-2">
+                          <label for="deskripsi-lk">Deskripsi Mempelai Pria</label>
+                          <input type="text" name="deskripsi-lk" class="email input-step-2-1" id="deskripsi-lk" placeholder="Isi deskripsi mempelai pria...">
+                        </div>
+                      </div>
+
+                      {{-- wanita --}}
+                      <div class="form-row">
+                        <div class="form-holder" style="width: 300px">
+                          <label for="honorific-pr">Nama Mempelai Wanita</label>
+                          <select name="honorific-pr" id="honorific-pr" class="form-control">
+                            <option value="mr" selected>Mr.</option>
+                            <option value="ms">Ms.</option>
+                            <option value="mrs">Mrs.</option>
+                          </select>
+                        </div>
+                        <div class="form-holder" style="width: 100%">
+                          <label for="nama-lengkap-lk" style="display: hidden; color: white">Label</label>
+                          <input type="text" placeholder="Tulis nama Anda" class="form-control input-step-2" id="nama-lengkap-lk" name="nama-lengkap-lk">
+                          <span><i class="zmdi zmdi-search"></i></span>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-holder form-holder-2">
+                          <label for="orangtua-lk">Nama Orang Tua Mempelai Pria</label>
+                          <input type="text" name="orangtua-lk" class="email input-step-2-1" id="orangtua-lk" placeholder="Nama orang tua mempelai pria">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-holder form-holder-2">
+                          <label for="deskripsi-lk">Deskripsi Mempelai Pria</label>
+                          <input type="text" name="deskripsi-lk" class="email input-step-2-1" id="deskripsi-lk" placeholder="Isi deskripsi mempelai pria...">
+                        </div>
+                      </div>
+                      
                     </div>
 			            </section>
 			            <!-- SECTION 3 -->

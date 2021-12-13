@@ -47,7 +47,7 @@
 
         <nav class="navbar fixed-top" style="background-color: #0199ff;">
             <div class="container-fluid">
-                <a type="button" class="btn border-0 mx-3" href="/order/undangan/{{ $undangan[0]->id }}" style="background: white; color: #0199ff; font-size: 14px; font-weight: 500">Kembali</a>
+                <a type="button" class="btn border-0 mx-3" href="/order/undangan/ulangtahun/{{ $undangan[0]->id }}" style="background: white; color: #0199ff; font-size: 14px; font-weight: 500">Kembali</a>
                 <a class="navbar-brand ms-0" style="color: white"><strong>Invita.</strong>id | <span style="font-size: 15px">Preview Undangan</span></a>
             </div>
         </nav>

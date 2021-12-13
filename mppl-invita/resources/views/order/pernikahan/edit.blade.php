@@ -49,7 +49,7 @@
 
 <main style="background: #fafafa;">
 
-  <a style="margin-left: 50px; padding-top: 30px; display: flex; flex-direction: row; align-items: center; text-decoration: none" href="/order/undangan/{{ $undangan[0]->id }}">
+  <a style="margin-left: 50px; padding-top: 30px; display: flex; flex-direction: row; align-items: center; text-decoration: none" href="/order/undangan/ulangtahun/{{ $undangan[0]->id }}">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z"/>
     </svg>
@@ -59,7 +59,7 @@
   <div class="page-content">
 		<div class="wizard-v5-content">
 			<div class="wizard-form">
-		        <form class="form-register" id="form-register" action="/order/undangan/{{ $undangan[0]->id }}/edit" method="post">
+		        <form class="form-register" id="form-register" action="/order/undangan/ulangtahun/{{ $undangan[0]->id }}/edit" method="post">
               @csrf
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->

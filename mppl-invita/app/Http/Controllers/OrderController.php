@@ -30,12 +30,12 @@ class OrderController extends Controller
         ]);
     }
 
-    public function buat()
+    public function buatUlangTahun()
     {
-        return view('order.buat');
+        return view('order.ulangtahun.buat');
     }
 
-    public function buatUndangan(Request $request)
+    public function buatUndanganUlangTahun(Request $request)
     {
         // dd($request[0]);
         $id_user = auth()->user()->id;
@@ -78,7 +78,7 @@ class OrderController extends Controller
         return redirect('/order');
     }
 
-    public function detail($id)
+    public function detailUlangTahun($id)
     {
         $undangan = DB::table('undangans')
             ->where('id', '=', $id)
@@ -90,13 +90,13 @@ class OrderController extends Controller
             ->where('id_undangan', '=', $id)
             ->get();
 
-        return view('order.undangan', [
+        return view('order.ulangtahun.undangan', [
             'undangan' => $undangan,
             'detail' => $detail
         ]);
     }
 
-    public function edit($id)
+    public function editUlangTahun($id)
     {
         $undangan = DB::table('undangans')
             ->where('id', '=', $id)
@@ -108,13 +108,13 @@ class OrderController extends Controller
             ->where('id_undangan', '=', $id)
             ->get();
 
-        return view('order.edit', [
+        return view('order.ulangtahun.edit', [
             'undangan' => $undangan,
             'detail' => $detail
         ]);
     }
 
-    public function editUndangan(Request $request, $id)
+    public function editUndanganUlangTahun(Request $request, $id)
     {
         $undangan = Undangan::find($id);
 
@@ -140,7 +140,7 @@ class OrderController extends Controller
         ]);
     }
 
-    public function preview($id)
+    public function previewUlangTahun($id)
     {
         $undangan = DB::table('undangans')
             ->where('id', '=', $id)
@@ -152,7 +152,7 @@ class OrderController extends Controller
             ->where('id_undangan', '=', $id)
             ->get();
 
-        return view('order.preview', [
+        return view('order.ulangtahun.preview', [
             'undangan' => $undangan,
             'detail' => $detail
         ]);
@@ -185,5 +185,11 @@ class OrderController extends Controller
         ]);
 
         return redirect('/order');
+    }
+
+    // pernikahan
+    public function buatPernikahan()
+    {
+        return view('order.pernikahan.buat');
     }
 }

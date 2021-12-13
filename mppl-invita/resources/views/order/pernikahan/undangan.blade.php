@@ -62,8 +62,8 @@
             <p style="width: 70%; text-align: center; font-size: 16px">{{ $detail[0]->deskripsi_ulangtahun }}</p>
 
             <div class="row-12">
-                <a href="/order/undangan/{{ $undangan[0]->id }}/preview" class="btn btn-primary m-2 px-4 shadow border-0" style="background: white; color:#0199ff; font-size: 16px;">Preview</a>
-                <a href="#" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Publish</a>
+                <a href="/order/undangan/ulangtahun/{{ $undangan[0]->id }}/preview" class="btn btn-primary m-2 px-4 shadow border-0" style="background: white; color:#0199ff; font-size: 16px;">Preview</a>
+                <a href="/order/pembayaran" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Publish</a>
             </div>
 
             <hr class="m-5" style="border-top: 1px; border-color: #b3b3b3; border-style: solid; width: 100%">
@@ -72,7 +72,7 @@
                 <div class="card justify-content-center" style="width: 18rem;">
                     <img src="/img/edit-data-undangan.png" class="card-img-top p-5" alt="..." style="height: 18rem; object-fit: cover">
                     <div class="card-body">
-                      <a href="/order/undangan/{{ $undangan[0]->id }}/edit" class="btn btn-primary shadow border-0" style="font-size: 14px; background:#0199ff;">Edit Data Undangan</a>
+                      <a href="/order/undangan/ulangtahun/{{ $undangan[0]->id }}/edit" class="btn btn-primary shadow border-0" style="font-size: 14px; background:#0199ff;">Edit Data Undangan</a>
                     </div>
                   </div>
                   <div class="card d-flex justify-content-center" style="width: 18rem;">

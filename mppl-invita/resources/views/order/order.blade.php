@@ -80,7 +80,7 @@
               <p class="card-text">Ulang Tahun <strong>{{ $item->nama_ulangtahun }}</strong> 🎈</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a class="btn btn-sm btn-outline-secondary px-3" href="/order/undangan/{{ $item->id_undangan }}" style="font-size: 14px">Lihat Detail</a>
+                  <a class="btn btn-sm btn-outline-secondary px-3" href="/order/undangan/ulangtahun/{{ $item->id_undangan }}" style="font-size: 14px">Lihat Detail</a>
                   <a type="button" class="btn btn-sm btn-outline-secondary px-3" id="review" href="/order/review/{{ $item->id }}" style="font-size: 14px">Beri Review</a>
                 </div>
               </div>
@@ -95,33 +95,33 @@
   </div>
 
   {{-- modal --}}
-  <div class="modal fs-2" tabindex="-1" role="dialog" id="modalTour" aria-hidden="true" style="margin-top: 20vh;">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content rounded-6 shadow" style="width: 700px">
+  <div class="modal fs-2 justify-content-center" tabindex="-1" role="dialog" id="modalTour" aria-hidden="true" style="margin-top: 15vh;">
+    <div class="modal-dialog p-0" role="document">
+      <div class="modal-content rounded-6 shadow">
         <div>
-        <button type="button" class="btn btn-primary w-" data-bs-dismiss="modal">
+        <button type="button" class="btn" data-bs-dismiss="modal">
           <p class="fs-1">&times;</p>
         </button>
         </div>
-        <div class="modal-body p-5 d-flex justify-content-center flex-column">
+        <div class="modal-body p-5 pt-0 d-flex justify-content-center flex-column">
           <h2 class="fw-bold mb-0 text-align-center" style="text-align: center">Tentukan Acaramu</h2>
   
-          <ul class="d-flex gap-4 my-5 list-unstyled justify-content-center">
-            <li class="d-flex gap-4 align-items-center">
+          <ul class="d-grid gap-4 my-5 list-unstyled">
+            <li class="d-flex gap-4 align-items-center shadow" style="border: 1px solid #0199ff; padding: 8px; border-radius: 10px">
               <img src="/img/i-pernikahan.png" style="height: 60px; width: 60px" alt="">
-                <a href="#" style="text-decoration: none">
+                <a href="/order/buat/pernikahan" style="text-decoration: none">
                   <h5 class="mb-0">Undangan</h5>
                   <p class="mb-0" style="color: #0199ff; font-weight: 600">Pernikahan</p>
                 </a>
             </li>
-            <li class="d-flex gap-4 align-items-center">
+            <li class="d-flex gap-4 align-items-center shadow" style="border: 1px solid #0199ff; padding: 8px; border-radius: 10px">
               <img src="/img/i-ultah.png" style="height: 60px; width: 60px" alt="">
-                <a href="#" style="text-decoration: none">
+                <a href="/order/buat/ulangtahun" style="text-decoration: none">
                   <h5 class="mb-0">Undangan</h5>
                   <p class="mb-0" style="color: #0199ff; font-weight: 600">Ulang Tahun</p>
                 </a>
             </li>
-            <li class="d-flex gap-4 align-items-center">
+            <li class="d-flex gap-4 align-items-center shadow" style="border: 1px solid #0199ff; padding: 8px; border-radius: 10px">
               <img src="/img/i-lainnya.png" style="height: 60px; width: 60px" alt="">
                 <a href="#" style="text-decoration: none">
                   <h5 class="mb-0">Undangan</h5>
