@@ -59,29 +59,41 @@
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
 
+  <div class="album py-5 bg-light">
+    @if ($data)
+      <h1 class="fw-normal pb-5" style="color: #0199ff; font-size: 32px; padding-left: 90px">Undangan Saya</h1>
+    @else
+      
+    @endif
+
+    <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  
+        @foreach ($data as $item)
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="bd-placeholder-img card-img-top" src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" style="height: 220px; object-fit:cover">
+            {{-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> --}}
 
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="font-size: 16px">
+              <p class="card-text">Ulang Tahun <strong>{{ $item->nama_ulangtahun }}</strong> 🎈</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <a class="btn btn-sm btn-outline-secondary px-3" href="/order/undangan/{{ $item->id_undangan }}" style="font-size: 14px">Lihat Detail</a>
+                  <button type="button" class="btn btn-sm btn-outline-secondary px-3" style="font-size: 14px">Beri Review</button>
                 </div>
-                <small class="text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
+
+        @endforeach
+
       </div>
     </div>
   </div>
+
 
 </main>
 

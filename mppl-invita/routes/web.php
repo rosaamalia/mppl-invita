@@ -40,4 +40,9 @@ Route::name('order')->prefix('order')->group(function () {
     Route::get('/', [OrderController::class, 'index'])->middleware('auth');
     Route::get('/buat', [OrderController::class, 'buat'])->middleware('auth');
     Route::post('/buat', [OrderController::class, 'buatUndangan']);
+    Route::get('/undangan/{id}/edit', [OrderController::class, 'edit'])->middleware('auth');
+    Route::post('/undangan/{id}/edit', [OrderController::class, 'editUndangan']);
+    Route::get('/undangan/{id}/preview', [OrderController::class, 'preview'])->middleware('auth');
 });
+
+Route::get('/order/undangan/{id}', [OrderController::class, 'detail'])->middleware('auth')->name('undangan');
