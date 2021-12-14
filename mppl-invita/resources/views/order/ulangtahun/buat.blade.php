@@ -64,11 +64,13 @@
 			            <section>
 			                <div class="inner">
                         <h4 style="color: #044581">Step 1</h4>
-                        <p style="color: #044581; font-weight:700; font-size: 20px">Pilih Tema Undangan Ulangtahun</p>
+                        <p style="color: #044581; font-weight:700; font-size: 20px">Pilih Tema Undangan Ulang Tahun</p>
                         <div class="form-row">
                           <div id="radio" style="font-size: 16px">
-                              <input type="radio" name="jenis" value="basic"><strong>Basic</strong> - Mulai dari IDR 195.000
-                              <input type="radio" name="jenis" value="premium"><strong>Premium</strong> - Mulai dari IDR 2.000.000
+                              <input class="me-3" type="radio" name="jenis" value="basic">
+                              <strong class="">Basic</strong> 
+                              <span class="me-5">- Mulai dari IDR 195.000</span> 
+                              <input class="me-3" type="radio" name="jenis" value="premium"><strong>Premium</strong> - Mulai dari IDR 2.000.000
                           </div>
                         </div>
 
@@ -76,8 +78,6 @@
                           <img src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="img-fluid" style="width: 100%; height: 150px; object-fit: cover; padding: 0 10px"></img>
                           <img src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="img-fluid" style="width: 100%; height: 150px; object-fit: cover; padding: 0 10px"></img>
                         </div>
-                      
-                    
                     </div>
 			            </section>
 						<!-- SECTION 2 -->

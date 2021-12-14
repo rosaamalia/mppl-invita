@@ -67,8 +67,10 @@
                         <p style="color: #044581; font-weight:700; font-size: 20px">Pilih Tema Undangan Pernikahan</p>
                         <div class="form-row">
                           <div id="radio" style="font-size: 16px">
-                              <input type="radio" name="jenis" value="basic"><strong>Basic</strong> - Mulai dari IDR 195.000
-                              <input type="radio" name="jenis" value="premium"><strong>Premium</strong> - Mulai dari IDR 2.000.000
+                              <input class="me-3" type="radio" name="jenis" value="basic">
+                              <strong class="">Basic</strong> 
+                              <span class="me-5">- Mulai dari IDR 195.000</span> 
+                              <input class="me-3" type="radio" name="jenis" value="premium"><strong>Premium</strong> - Mulai dari IDR 2.000.000
                           </div>
                         </div>
 
