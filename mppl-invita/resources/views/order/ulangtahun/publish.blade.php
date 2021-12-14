@@ -19,9 +19,6 @@
     @include('components.fonts')
 
     <style>
-        body {
-            padding-top: 3.5rem;
-        }
 
         main {
             font-family: 'Montserrat', sans-serif;
@@ -45,37 +42,30 @@
     </head>
     <body style="background-color: #FEDCDB">
 
-        <nav class="navbar fixed-top" style="background-color: #0199ff;">
-            <div class="container-fluid">
-                <a type="button" class="btn border-0 mx-3" href="/order/undangan/ulangtahun/{{ $undangan[0]->id }}" style="background: white; color: #0199ff; font-size: 14px; font-weight: 500">Kembali</a>
-                <a class="navbar-brand ms-0" style="color: white"><strong>Invita.</strong>id | <span style="font-size: 15px">Preview Undangan</span></a>
-            </div>
-        </nav>
-
+      <header>
+          <nav class="navbar navbar-expand-lg navbar-dark px-3 fixed-top" style="background: #FE6694">
+              <div class="container-fluid">
+                  <a class="navbar-brand ms-0" style="color: white"><strong>Undangan</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#tentangku">Tentangku</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#jadwal">Jadwal Acara</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#bukutamu">Buku Tamu</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+        </header>
         <main>
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-dark px-3" style="background: #FE6694">
-                    <div class="container-fluid">
-                        <a class="navbar-brand ms-0" style="color: white"><strong>Undangan</strong></a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                          <li class="nav-item">
-                            <a class="nav-link" href="#tentangku">Tentangku</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#jadwal">Jadwal Acara</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#bukutamu">Buku Tamu</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-              </header>
               
                 <section class="py-5 text-center container-fluid mx-0" style="background: url(/img/background-ulangtahun.png); background-repeat: no-repeat; background-size: 100vw; color: white">
                   <div class="row-12 py-lg-5">
@@ -129,9 +119,56 @@
 
                 <section class="py-5 text-center container-fluid mx-0" style="background: url(/img/background-bukutamu.png); background-repeat: no-repeat; background-size: 100vw; color: white; margin: 100px;" id="bukutamu">
                     <div class="row-12 py-lg-5">
-                      <div class="col-lg-8 col-md-8 mx-auto">
-                        <h1 class="fw-light">Buku Tamu</h1>
-                        <p class="lead">Buku tamu hanya dibuka setelah kamu publish undangan ini.</p>
+                      <div class="col-lg-12 col-md-12 mx-auto">
+                        <h1 class="fw-bold">Buku Tamu</h1>
+                        
+                        @if(session()->has('tamusukses'))
+                        <div class="row justify-content-center">
+                        <div class="alert alert-success alert-dismissible fade show col-xxl-7 col-xl-8 col-lg-10 col-sm-11 col-11" role="alert">
+                            {{ session('tamusukses') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        </div>
+                        @endif
+                        
+                        <form action="/tamu/ulangtahun/{{ $undangan[0]->slug }}" method="POST" style="padding-left: 300px">
+                            @csrf
+                        <div class="row mt-4">
+                            <div class="col-2 w-bold">
+                                <p>Nama</p>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" class="form-control input-ubah" placeholder="Nama" aria-label="Username" name="nama_lengkap" id="nama_lengkap">
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-2 fw-bold">
+                                <p>Nomor Telepon</p>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" class="form-control input-ubah" placeholder="Nomor Telepon" aria-label="Username" name="telepon" id="telepon">
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-2 fw-bold">
+                                <p>Kehadiran</p>
+                            </div>
+                            <div class="col-5">
+                                <select class="form-select input-ubah" aria-label="Default select example" name="kehadiran" id="kehadiran">
+                                    <option value="1" selected>Bisa Hadir</option>
+                                    <option value="0">Tidak Bisa</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-4 btn-form-ubah">
+                            <div class="col-7 fs-3 fw-bold text-end justify-content-end">
+                              <button class="btn button btn-simpan text-white ps-4 pe-4 fw-bold" type="submit" style="background-color: #495057">Submit</button>
+                            </div>
+                        </div>
+                        </form>
+
                       </div>
                     </div>
                 </section>

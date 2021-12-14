@@ -396,4 +396,32 @@ class OrderController extends Controller
             'detail' => $detail
         ]);
     }
+
+    public function tamuPernikahan($id)
+    {
+        $data = DB::table('tamus')
+            ->join('undangans', 'tamus.id_undangan', '=', 'undangans.id')
+            ->select('tamus.*')
+            ->where('undangans.id', '=', $id)
+            ->get();
+
+        return view('order.pernikahan.bukutamu', [
+            'data' => $data,
+            'id' => $id
+        ]);
+    }
+
+    public function tamuUlangTahun($id)
+    {
+        $data = DB::table('tamus')
+            ->join('undangans', 'tamus.id_undangan', '=', 'undangans.id')
+            ->select('tamus.*')
+            ->where('undangans.id', '=', $id)
+            ->get();
+
+        return view('order.ulangtahun.bukutamu', [
+            'data' => $data,
+            'id' => $id
+        ]);
+    }
 }

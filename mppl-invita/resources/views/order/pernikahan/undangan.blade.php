@@ -102,7 +102,7 @@
                   <div class="card d-flex justify-content-center" style="width: 18rem;">
                     <img src="/img/buku-tamu.png" class="card-img-top p-5" alt="..." style="height: 18rem; object-fit: cover">
                     <div class="card-body">
-                      <a href="/order/bukutamu" class="btn btn-primary shadow border-0" style="font-size: 14px; background:#0199ff;">Laporan Buku Tamu</a>
+                      <a href="/order/undangan/pernikahan/{{ $undangan[0]->id }}/bukutamu" class="btn btn-primary shadow border-0" style="font-size: 14px; background:#0199ff;">Laporan Buku Tamu</a>
                     </div>
                   </div>
             </div>

@@ -46,4 +46,43 @@ class PublishController extends Controller
             'slug' => $slug
         ])->with('tamusukses', 'Berhasil menambahkan data kehadiran.');
     }
+
+    public function index_ulangtahun($slug)
+    {
+        $undangan = DB::table('undangans')
+            ->where('slug', '=', $slug)
+            ->select('undangans.*')
+            ->get();
+
+        $detail = DB::table('undangan_ulang_tahuns')
+            ->select('undangan_ulang_tahuns.*')
+            ->where('id_undangan', '=', $undangan[0]->id)
+            ->get();
+
+        return view('order.ulangtahun.publish', [
+            'undangan' => $undangan,
+            'detail' => $detail
+        ]);
+    }
+
+    public function tamu_ulangtahun(Request $request, $slug)
+    {
+        $undangan = DB::table('undangans')
+            ->where('slug', '=', $slug)
+            ->select('undangans.*')
+            ->get();
+
+        // dd($request);
+
+        Tamu::create([
+            'id_undangan' => $undangan[0]->id,
+            'nama_tamu' => $request['nama_lengkap'],
+            'telepon_tamu' => $request['telepon'],
+            'kehadiran_tamu' => $request['kehadiran']
+        ]);
+
+        return redirect()->route('publish_ulangtahun', [
+            'slug' => $slug
+        ])->with('tamusukses', 'Berhasil menambahkan data kehadiran.');
+    }
 }

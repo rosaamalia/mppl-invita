@@ -56,6 +56,7 @@ Route::name('order')->prefix('order')->group(function () {
     Route::get('/undangan/ulangtahun/{id}/preview', [OrderController::class, 'previewUlangTahun'])->middleware('auth');
     Route::get('/undangan/ulangtahun/review/{id}', [OrderController::class, 'reviewUlangTahun'])->middleware('auth');
     Route::post('/undangan/ulangtahun/review/{id}', [OrderController::class, 'reviewUndanganUlangTahun']);
+    Route::get('/undangan/ulangtahun/{id}/bukutamu', [OrderController::class, 'tamuUlangTahun'])->middleware('auth');
 
     Route::get('/buat/pernikahan', [OrderController::class, 'buatPernikahan'])->middleware('auth');
     Route::post('/buat/pernikahan', [OrderController::class, 'buatUndanganPernikahan']);
@@ -64,6 +65,7 @@ Route::name('order')->prefix('order')->group(function () {
     Route::get('/undangan/pernikahan/review/{id}', [OrderController::class, 'reviewPernikahan'])->middleware('auth');
     Route::post('/undangan/pernikahan/review/{id}', [OrderController::class, 'reviewUndanganPernikahan']);
     Route::get('/undangan/pernikahan/{id}/preview', [OrderController::class, 'previewPernikahan'])->middleware('auth');
+    Route::get('/undangan/pernikahan/{id}/bukutamu', [OrderController::class, 'tamuPernikahan'])->middleware('auth');
 
     Route::get('/undangan/pembayaran/{id}', [PembayaranController::class, 'pembayaran'])->middleware('auth');
     Route::patch('/undangan/pembayaran/{id}', [PembayaranController::class, 'pembayaranUndangan']);
@@ -85,3 +87,6 @@ Route::get('/order/bukutamu', [function () {
 
 Route::get('/pernikahan/{slug}', [PublishController::class, 'index_pernikahan'])->name('publish_pernikahan');
 Route::post('/tamu/pernikahan/{slug}', [PublishController::class, 'tamu_pernikahan']);
+
+Route::get('/ulangtahun/{slug}', [PublishController::class, 'index_ulangtahun'])->name('publish_ulangtahun');
+Route::post('/tamu/ulangtahun/{slug}', [PublishController::class, 'tamu_ulangtahun']);
