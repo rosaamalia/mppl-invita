@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Invita.id</title>
+    <title>Pembayaran Invita.id</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
@@ -41,21 +41,68 @@
         <div class="row text-center fs-1">
             <p style="color: #0199FF"><Strong>Pesan </Strong>Undangan</p>
         </div>
+
+        @foreach ($data_ulangtahun as $item) 
+        <form action="/order/undangan/pembayaran/{{ $item->id_undangan }}" method="POST">
+        @endforeach
+
+        @foreach ($data_pernikahan as $item) 
+        <form action="/order/undangan/pembayaran/{{ $item->id_undangan }}" method="POST">
+        @endforeach
+        @csrf
+        @method('patch')
         <div class="row">
             <p class="fs-2" style="color: #044581"><strong>Detail Pesanan</strong></p>
         </div>
         <div class="row">
+          @foreach ($data_ulangtahun as $item)
             <div class="row list-portfolio" style="background-color: #f9f9f9">
               <div class="col-3 img-port bg-success p-0" style="">
-                <img class="" src="img/fredi-maleeva.png" alt="" />
+                <img class="w-100" src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" style="height:120px ;object-fit: cover"/>
               </div>
               <div class="col-9">
-                <p class="mt-3">Undangan Basic</p>
+                @if ($item->tema_undangan == 'basic')
+                  <p class="mt-3">Undangan Basic</p>
+                @else
+                  <p class="mt-3">Undangan Premium</p>
+                @endif
+
                 <p class="" style="margin-top : -10px">#004</p>
-                <p class="mt-4 fs-4 fw-bold">Ulang Tahun Abi</p>
-                <p class="" style="color : #0199FF; margin-top : -10px">IDR 195.000,-</p>
+                <p class="mt-4 fs-4 fw-bold">Ulang Tahun {{ $item->nama_ulangtahun }}</p>
+                
+                @if ($item->tema_undangan == 'basic')
+                  <p class="" style="color : #0199FF; margin-top : -10px">IDR 195.000,-</p>
+                @else
+                  <p class="" style="color : #0199FF; margin-top : -10px">IDR 2.000,000,-</p>
+                @endif
               </div>
             </div>
+            @endforeach
+            
+            @foreach ($data_pernikahan as $item)
+            <div class="row list-portfolio" style="background-color: #f9f9f9">
+              <div class="col-3 img-port bg-success p-0" style="">
+                <img class="w-100" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" style="height:120px ;object-fit: cover"/>
+              </div>
+              <div class="col-9">
+                @if ($item->tema_undangan == 'basic')
+                  <p class="mt-3">Undangan Basic</p>
+                @else
+                  <p class="mt-3">Undangan Premium</p>
+                @endif
+
+                <p class="" style="margin-top : -10px">#004</p>
+                <p class="mt-4 fs-4 fw-bold">Pernikahan {{ $item->nama_mempelai_lk }} dan {{ $item->nama_mempelai_pr }}</p>
+                
+                @if ($item->tema_undangan == 'basic')
+                  <p class="" style="color : #0199FF; margin-top : -10px">IDR 195.000,-</p>
+                @else
+                  <p class="" style="color : #0199FF; margin-top : -10px">IDR 2.000,000,-</p>
+                @endif
+              </div>
+            </div>
+            @endforeach
+            
         </div>
         <div class="row mt-5 pt-5">
             <h2 class="fs-3 fw-light" style="color : #044581">Step 1</h2>
@@ -65,7 +112,7 @@
         </div>
         <div class="row">
             <div class="col-4 d-block">
-                <input type="text" class="form-control text-center text-black fs-3" placeholder="Masukkan kode kupon" aria-label="Kode Kupon">
+                <input type="text" class="form-control text-center text-black fs-3" placeholder="Masukkan kode kupon" aria-label="Kode Kupon" id="kupon" name="kupon">
             </div>
             <div class="col-1">
                 <button type="button" class="btn button border-none text-white fs-3 px-5" style="background-color : #0199FF; border-radius : 5px">OK</button>
@@ -81,47 +128,78 @@
         </div>
         <div class="row mt-5">
             <div class="col-4 border-1 border rounded-3 py-3 fs-3">
-                <input class="form-check-input mt-2 me-3" type="radio" id="atm" name="metode-pembayaran" value="" aria-label="1">
+                <input class="form-check-input mt-2 me-3" type="radio" id="atm" name="metode-pembayaran" value="ATM Transfer" aria-label="1">
                 <strong>ATM Transfer</strong>
             </div>
             <div class="col-4 border-1 border rounded-3 ms-5 py-3 fs-3">
-                <input class="form-check-input mt-2 me-3" type="radio" id="kartu" name="metode-pembayaran" value="" aria-label="2">
+                <input class="form-check-input mt-2 me-3" type="radio" id="kartu" name="metode-pembayaran" value="Kartu Debit / Kredit Online" aria-label="2">
                 <strong>Kartu Debit / Kredit Online</strong>
             </div>
         </div>
         <div class="row my-5 pb-5">
             <div class="col-4 border-1 border rounded-3 py-3 fs-3">
-                <input class="form-check-input mt-2 me-3" type="radio" id="e-banking" name="metode-pembayaran" value="" aria-label="3">
+                <input class="form-check-input mt-2 me-3" type="radio" id="e-banking" name="metode-pembayaran" value="Bank Transfer (Verifikasi Otomatis)" aria-label="3">
                 <strong>Bank Transfer (Verifikasi Otomatis)</strong>
             </div>
             <div class="col-4 border-1 border rounded-3 ms-5 py-3 fs-3">
-                <input class="form-check-input mt-2 me-3" type="radio" id="ovo" name="metode-pembayaran" value="" aria-label="4">
+                <input class="form-check-input mt-2 me-3" type="radio" id="ovo" name="metode-pembayaran" value="OVO" aria-label="4">
                 <strong>OVO</strong>
             </div>
         </div>
         <div class="row mt-5 pt-5 d-flex ">
             <div class="col-2 ms-auto">
                 <p class="fs-3 fw-bolder style="color : #044581"><strong>Total Tagihan</strong></p>
-                <p class="fs-4 fw-bolder" style="color : #DF3C4F; margin-top : -5px"><strong>IDR 195.000,-</strong></p>
+                @foreach ($data_ulangtahun as $item)
+                    @if ($item->tema_undangan == 'basic')
+                      <p class="fs-4 fw-bolder" style="color : #DF3C4F; margin-top : -5px"><strong>IDR 195.000,-</strong></p>
+                      <input type="hidden" id="harga" name="harga" value="195000">
+                    @else
+                      <p class="fs-4 fw-bolder" style="color : #DF3C4F; margin-top : -5px"><strong>IDR 2.000.000,-</strong></p>
+                      <input type="hidden" id="harga" name="harga" value="2000000">
+                    @endif
+                @endforeach
+
+                @foreach ($data_pernikahan as $item)
+                    @if ($item->tema_undangan == 'basic')
+                      <p class="fs-4 fw-bolder" style="color : #DF3C4F; margin-top : -5px"><strong>IDR 195.000,-</strong></p>
+                      <input type="hidden" id="harga" name="harga" value="195000">
+                    @else
+                      <p class="fs-4 fw-bolder" style="color : #DF3C4F; margin-top : -5px"><strong>IDR 2.000.000,-</strong></p>
+                      <input type="hidden" id="harga" name="harga" value="2000000">
+                    @endif
+                @endforeach
             </div>
             <div class="col-1  ">
-                <button
-                type="button"
-                class="btn button border-0 py-3 bg-danger text-white w-100 fs-3 fw-bolder"
-                style="border-radius: 10px; "
-                >
-                Batal
-            </button>
+              @foreach ($data_ulangtahun as $item)  
+              <a
+              href="/order/undangan/ulangtahun/{{ $item->id_undangan }}"
+              class="btn button border-0 py-3 bg-danger text-white w-100 fs-3 fw-bolder"
+              style="border-radius: 10px; "
+              >
+              Batal
+              </a>
+              @endforeach
+
+              @foreach ($data_pernikahan as $item)  
+              <a
+              href="/order/undangan/pernikahan/{{ $item->id_undangan }}"
+              class="btn button border-0 py-3 bg-danger text-white w-100 fs-3 fw-bolder"
+              style="border-radius: 10px; "
+              >
+              Batal
+              </a>
+              @endforeach
             </div>
             <div class="col-3 ">
                 <button
-                type="button"
+                type="submit"
                 class="btn button border-0 py-3 text-white w-100 fs-3 fw-bolder"
                 style="border-radius: 10px; background: #0199FF;"
                 >
                 Buat Undangan
             </button>
             </div>
+          </form>
         </div>
     </div>
     <!-- end blog -->

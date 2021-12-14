@@ -43,11 +43,11 @@
     </style>
 
     </head>
-    <body style="background-color: #FCB2A9">
+    <body style="background-color: #d3d3d3">
 
         <nav class="navbar fixed-top" style="background-color: #0199ff;">
             <div class="container-fluid">   
-                <a type="button" class="btn border-0 mx-3" href="" style="background: white; color: #0199ff; font-size: 14px; font-weight: 500">Kembali</a>
+                <a type="button" class="btn border-0 mx-3" href="/order/undangan/pernikahan/{{ $undangan[0]->id }}" style="background: white; color: #0199ff; font-size: 14px; font-weight: 500">Kembali</a>
                 <a class="navbar-brand ms-0" style="color: white"><strong>Invita.</strong>id | <span style="font-size: 15px">Preview Undangan</span></a>
             </div>
         </nav>
@@ -63,7 +63,7 @@
                       <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                           <li class="nav-item">
-                            <a class="nav-link" href="#tentangku">Tentangku</a>
+                            <a class="nav-link" href="#tentangkami">Tentang Kami</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="#jadwal">Jadwal Acara</a>
@@ -80,49 +80,65 @@
                 <section class="py-5 text-center container-fluid mx-0" style="background: url(/img/background-pernikahan.png); background-position: center center; at: no-repeat; background-size: 100vw; color: white">
                   <div class="row-12 py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
-                        <p class="lead" style="font-size: 15px">Ulang Tahun ke-[umur]</p>
-                      <h1 class="fw-light"></h1>
+                        <p class="lead" style="font-size: 15px">Undangan Pernikahan</p>
+                      <h1 class="fw-light" style="font-family: 'Arima Madurai', cursive;">{{ $detail[0]->nama_mempelai_lk }} dan {{ $detail[0]->nama_mempelai_pr }}</h1>
                       <hr class="my-3" style="border-top: 1px; border-color: #b3b3b3; border-style: solid; width: 100%">
-                      <p class="lead">Wishing you a day filled with happiness and a year filled with joy. Happy birthday!</p>
+                      <p class="lead">Wishing you a lifetime of love and happiness.</p>
                     </div>
                   </div>
                 </section>
 
-                <section class="d-flex justify-content-center" id="tentangku">
-                    <div class="card my-5 shadow-sm" style="width: 80vw;">
+                <section class="d-flex flex-column justify-content-center align-items-center" id="tentangkami">
+                    <div class="card mt-5 shadow-sm" style="width: 80vw;">
                         <div class="row g-0">
                           <div class="col-md-4">
-                            <img src="/img/pernikahan-tentangku.jpg" class="img-fluid rounded-start" alt="...">
+                            <img src="https://images.unsplash.com/photo-1525957464700-a874b9bf1420?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" class="img-fluid rounded-start" alt="...">
                           </div>
                           <div class="col-md-8 p-3">
                             <div class="card-body">
-                              <h5 class="card-title">Tentangku</h5>
-                              <p class="card-text">Halo, namaku ! 🎈 <br> Ini adalah ulang tahunku yang ke-[umur].</p>
-                              <p class="card-text"></p>
+                              <h5 class="card-title"><strong>Mempelai Pria</strong></h5>
+                              <p class="card-text fs-2" style="font-family: 'Arima Madurai', cursive;">{{ $detail[0]->nama_mempelai_lk }}</p>
+                              <p class="card-text">Putra dari Bapak {{ $detail[0]->orangtua_mempelai_lk }}</p>
+                              <p class="card-text">{{ $detail[0]->deskripsi_mempelai_lk }}</p>
                             </div>
                           </div>
                         </div>
                     </div>
+                    <div class="card mt-1 mb-5 shadow-sm" style="width: 80vw;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="https://images.unsplash.com/photo-1595467959776-8acfb0dc313f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8 p-3">
+                          <div class="card-body">
+                            <h5 class="card-title"><strong>Mempelai Wanita</strong></h5>
+                            <p class="card-text fs-2" style="font-family: 'Arima Madurai', cursive;">{{ $detail[0]->nama_mempelai_pr }}</p>
+                            <p class="card-text">Putri dari Bapak {{ $detail[0]->orangtua_mempelai_pr }}</p>
+                            <p class="card-text">{{ $detail[0]->deskripsi_mempelai_pr }}</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
                 </section>
 
                 <section class="p-5 my-3 d-flex justify-content-center align-items-center flex-column" style="background-color: #fffff8" id="jadwal">
                     <div class="row">
-                        <h2>Perayaan Ulang Tahun 🎂</h2>
+                        <h2 class="fs-1" style="font-family: 'Arima Madurai', cursive;">Jadwal dan Lokasi</h2>
                     </div>
                     <hr class="my-3" style="border-top: 1px; border-color: #b3b3b3; border-style: solid; width: 50%">
-                    <p>Datang dan hadiri perayaan ulang tahunku pada</p>
+                    <p>Datang dan hadiri perayaan hari bahagia kami pada</p>
                     <table>
                         <tr>
                             <td style="width: 150px"><strong>Hari dan Tanggal</strong></td>
-                            <td style="width: 240px"></td>
+                            <td style="width: 240px">{{ $undangan[0]->tanggal_mulai_acara }}</td>
                         </tr>
                         <tr>
                             <td style="width: 150px"><strong>Waktu</strong></td>
-                            <td style="width: 240px"></td>
+                            <td style="width: 240px">{{ $undangan[0]->waktu_mulai_acara }} - {{ $undangan[0]->waktu_berakhir_acara }}</td>
                         </tr>
                         <tr>
                             <td style="width: 150px"><strong>Tempat</strong></td>
-                            <td style="width: 240px"></td>
+                            <td style="width: 240px">{{ $undangan[0]->lokasi_acara }}, {{ $undangan[0]->alamat_acara }}</td>
                         </tr>
                     </table>
                 </section>
@@ -136,12 +152,12 @@
                     </div>
                 </section>
 
-                <section class="p-5 mt-3 d-flex justify-content-center" style="background-color: #FEB1B7">
+                <section class="p-5 mt-3 d-flex justify-content-center" style="background-color: #f8f9fa">
                     <p>Tiada kesan tanpa kehadiranmu</p>
                 </section>
             
                 <footer>
-                    <div class="container-fluid footer" style="background-color: #FD788D">
+                    <div class="container-fluid footer" style="background-color: #495057">
                         <div class="container d-flex p-3">
                           <a href="#" class="me-auto p-2 text-decoration-none text-white">©Copyright Invita.id 2021</a>
                           <a href="#" class="p-2 me-5 text-decoration-none text-white">Privacy Policy</a>

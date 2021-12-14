@@ -344,4 +344,22 @@ class OrderController extends Controller
 
         return redirect('/review');
     }
+
+    public function previewPernikahan($id)
+    {
+        $undangan = DB::table('undangans')
+            ->where('id', '=', $id)
+            ->select('undangans.*')
+            ->get();
+
+        $detail = DB::table('undangan_pernikahans')
+            ->select('undangan_pernikahans.*')
+            ->where('id_undangan', '=', $id)
+            ->get();
+
+        return view('order.pernikahan.preview', [
+            'undangan' => $undangan,
+            'detail' => $detail
+        ]);
+    }
 }

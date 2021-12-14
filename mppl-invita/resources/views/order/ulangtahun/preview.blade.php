@@ -80,7 +80,7 @@
                 <section class="py-5 text-center container-fluid mx-0" style="background: url(/img/background-ulangtahun.png); background-repeat: no-repeat; background-size: 100vw; color: white">
                   <div class="row-12 py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
-                        <p class="lead" style="font-size: 15px">Ulang Tahun ke-[umur]</p>
+                        <p class="lead" style="font-size: 15px">Undangan Ulang Tahun</p>
                       <h1 class="fw-light">{{ $detail[0]->nama_ulangtahun }}</h1>
                       <hr class="my-3" style="border-top: 1px; border-color: #b3b3b3; border-style: solid; width: 100%">
                       <p class="lead">Wishing you a day filled with happiness and a year filled with joy. Happy birthday!</p>
@@ -97,7 +97,7 @@
                           <div class="col-md-8 p-3">
                             <div class="card-body">
                               <h5 class="card-title">Tentangku</h5>
-                              <p class="card-text">Halo, namaku {{ $detail[0]->nama_ulangtahun }}! 🎈 <br> Ini adalah ulang tahunku yang ke-[umur].</p>
+                              <p class="card-text">Halo, namaku {{ $detail[0]->nama_ulangtahun }}! 🎈 <br> Ini adalah ulang tahunku!.</p>
                               <p class="card-text">{{ $detail[0]->deskripsi_ulangtahun }}</p>
                             </div>
                           </div>

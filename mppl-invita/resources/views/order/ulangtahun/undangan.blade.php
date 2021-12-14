@@ -63,7 +63,7 @@
 
             <div class="row-12">
                 <a href="/order/undangan/ulangtahun/{{ $undangan[0]->id }}/preview" class="btn btn-primary m-2 px-4 shadow border-0" style="background: white; color:#0199ff; font-size: 16px;">Preview</a>
-                <a href="/order/pembayaran" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Publish</a>
+                <a href="/order/undangan/pembayaran/{{ $undangan[0]->id }}" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Publish</a>
             </div>
 
             <hr class="m-5" style="border-top: 1px; border-color: #b3b3b3; border-style: solid; width: 100%">
@@ -78,7 +78,7 @@
                   <div class="card d-flex justify-content-center" style="width: 18rem;">
                     <img src="/img/buku-tamu.png" class="card-img-top p-5" alt="..." style="height: 18rem; object-fit: cover">
                     <div class="card-body">
-                      <a href="#" class="btn btn-primary shadow border-0" style="font-size: 14px; background:#0199ff;">Laporan Buku Tamu</a>
+                      <a href="/order/bukutamu" class="btn btn-primary shadow border-0" style="font-size: 14px; background:#0199ff;">Laporan Buku Tamu</a>
                     </div>
                   </div>
             </div>

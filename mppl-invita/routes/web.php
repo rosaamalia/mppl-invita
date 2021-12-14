@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\PembayaranController;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
@@ -61,6 +62,10 @@ Route::name('order')->prefix('order')->group(function () {
     Route::post('/undangan/pernikahan/{id}/edit', [OrderController::class, 'editUndanganPernikahan']);
     Route::get('/undangan/pernikahan/review/{id}', [OrderController::class, 'reviewPernikahan'])->middleware('auth');
     Route::post('/undangan/pernikahan/review/{id}', [OrderController::class, 'reviewUndanganPernikahan']);
+    Route::get('/undangan/pernikahan/{id}/preview', [OrderController::class, 'previewPernikahan'])->middleware('auth');
+
+    Route::get('/undangan/pembayaran/{id}', [PembayaranController::class, 'pembayaran'])->middleware('auth');
+    Route::patch('/undangan/pembayaran/{id}', [PembayaranController::class, 'pembayaranUndangan']);
 
     Route::get('/harga', [function () {
         return view('harga');
@@ -73,14 +78,6 @@ Route::get('/order/undangan/pernikahan/{id}', [OrderController::class, 'detailPe
 Route::get('/akun', [AkunController::class, 'akun'])->name('akun');
 Route::post('/akun', [AkunController::class, 'update']);
 
-Route::get('/order/pembayaran', [function () {
-    return view('order.pembayaran');
-}])->name('pembayaran');
-
 Route::get('/order/bukutamu', [function () {
     return view('order.bukutamu');
 }])->name('bukutamu');
-
-Route::get('/order/pernikahan/preview', [function () {
-    return view('order.pernikahan.preview');
-}])->name('pembayaran');

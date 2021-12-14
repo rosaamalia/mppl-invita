@@ -16,9 +16,10 @@ class CreateDetailPembayaransTable extends Migration
         Schema::create('detail_pembayarans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_order')->references('id')->on('orders');
+            $table->string('kode_kupon')->nullable();
             $table->string('metode_pembayaran');
             $table->boolean('status_pembayaran')->default(0);
-            $table->timestamp('waktu_pembayaran');
+            $table->timestamp('waktu_pembayaran')->default(date('Y-m-d H:i:s'));
             $table->timestamps();
         });
     }
