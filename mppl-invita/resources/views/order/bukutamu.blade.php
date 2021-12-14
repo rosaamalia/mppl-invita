@@ -38,7 +38,7 @@
     <!-- data akun -->
     
     <div class="container">
-        <a href="/"><button class="btn fs-2 mt-5" style="color : #0199FF"><i class="bi bi-arrow-left"></i> Kembali</button></a>
+        <a href="/order"><button class="btn fs-2 mt-5" style="color : #0199FF"><i class="bi bi-arrow-left"></i> Kembali</button></a>
         <div class="row mt-5 mb-5">
             <div class="col-10">
                 <h1 class="fs-1 fw-bold" style="color : #0199FF">Laporan Buku Tamu</h1>

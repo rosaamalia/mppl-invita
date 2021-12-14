@@ -100,9 +100,22 @@ class OrderController extends Controller
             ->where('id_undangan', '=', $id)
             ->get();
 
+        $id_order = DB::table('orders')
+            ->join('undangans', 'orders.id', '=', 'undangans.id_order')
+            ->select('orders.id')
+            ->where('undangans.id', '=', $id)
+            ->get();
+
+        $data_pembayaran = DB::table('orders')
+            ->join('detail_pembayarans', 'orders.id', '=', 'detail_pembayarans.id_order')
+            ->select('detail_pembayarans.*')
+            ->where('detail_pembayarans.id_order', '=', $id_order[0]->id)
+            ->get();
+
         return view('order.ulangtahun.undangan', [
             'undangan' => $undangan,
-            'detail' => $detail
+            'detail' => $detail,
+            'pembayaran' => $data_pembayaran
         ]);
     }
 
@@ -262,9 +275,22 @@ class OrderController extends Controller
             ->where('id_undangan', '=', $id)
             ->get();
 
+        $id_order = DB::table('orders')
+            ->join('undangans', 'orders.id', '=', 'undangans.id_order')
+            ->select('orders.id')
+            ->where('undangans.id', '=', $id)
+            ->get();
+
+        $data_pembayaran = DB::table('orders')
+            ->join('detail_pembayarans', 'orders.id', '=', 'detail_pembayarans.id_order')
+            ->select('detail_pembayarans.*')
+            ->where('detail_pembayarans.id_order', '=', $id_order[0]->id)
+            ->get();
+
         return view('order.pernikahan.undangan', [
             'undangan' => $undangan,
-            'detail' => $detail
+            'detail' => $detail,
+            'pembayaran' => $data_pembayaran
         ]);
     }
 

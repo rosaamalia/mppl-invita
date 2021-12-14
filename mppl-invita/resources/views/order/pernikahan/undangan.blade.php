@@ -72,8 +72,22 @@
             <p style="width: 70%; text-align: center; font-size: 16px">{{ $detail[0]->deskripsi_mempelai_pr }}</p>
 
             <div class="row-12 mt-5">
-                <a href="/order/undangan/pernikahan/{{ $undangan[0]->id }}/preview" class="btn btn-primary m-2 px-4 shadow border-0" style="background: white; color:#0199ff; font-size: 16px;">Preview</a>
+              @if ($pembayaran->isEmpty())
+              <a href="/order/undangan/pernikahan/{{ $undangan[0]->id }}/preview" class="btn btn-primary m-2 px-4 shadow border-0" style="background: white; color:#0199ff; font-size: 16px;">Preview</a>
                 <a href="/order/undangan/pembayaran/{{ $undangan[0]->id }}" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Publish</a>
+              @else
+                @foreach($pembayaran as $item)
+                @if ($item->status_pembayaran == 0)  
+                <a href="/order/undangan/pernikahan/{{ $undangan[0]->id }}/preview" class="btn btn-primary m-2 px-4 shadow border-0" style="background: white; color:#0199ff; font-size: 16px;">Preview</a>
+                  <a href="/order/undangan/pembayaran/{{ $undangan[0]->id }}" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Publish</a>
+                @else
+                  <div class="row-12 d-flex flex-column justify-content-center">
+                    <a href="#" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Lihat Undangan</a>
+                    <p class="fs-4 mt-3">Tautan Undangan: <a href="#">inivita.id/{slug}</a></p>
+                  </div>
+                @endif
+              @endforeach
+              @endif
             </div>
 
             <hr class="m-5" style="border-top: 1px; border-color: #b3b3b3; border-style: solid; width: 100%">
