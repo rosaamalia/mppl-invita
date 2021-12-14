@@ -24,6 +24,7 @@ class CreateUndangansTable extends Migration
             $table->time('waktu_berakhir_acara', $precision = 0);
             $table->string('lokasi_acara');
             $table->string('alamat_acara');
+            $table->string('slug')->nullable();
             $table->boolean('peta_google')->default(0);
             $table->timestamps();
         });

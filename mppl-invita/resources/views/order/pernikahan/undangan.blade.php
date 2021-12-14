@@ -82,8 +82,8 @@
                   <a href="/order/undangan/pembayaran/{{ $undangan[0]->id }}" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Publish</a>
                 @else
                   <div class="row-12 d-flex flex-column justify-content-center">
-                    <a href="#" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Lihat Undangan</a>
-                    <p class="fs-4 mt-3">Tautan Undangan: <a href="#">inivita.id/{slug}</a></p>
+                    <a href="/pernikahan/{{ $undangan[0]->slug }}" class="btn btn-primary m-2 px-4 shadow border-0" style="color: white; background:#0199ff;font-size: 16px;">Lihat Undangan</a>
+                    <p class="fs-4 mt-3">Tautan Undangan: <a href="#">inivita.id/pernikahan/{{ $undangan[0]->slug }}</a></p>
                   </div>
                 @endif
               @endforeach

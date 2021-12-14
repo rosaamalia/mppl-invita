@@ -57,6 +57,9 @@ class OrderController extends Controller
             $harga = 2000000;
         }
 
+        $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+        $slug = substr(str_shuffle($permitted_chars), 0, 10);
+
         // dd($harga);
         $order = Order::create([
             'id_user' => $id_user,
@@ -73,7 +76,8 @@ class OrderController extends Controller
             'waktu_mulai_acara' => $request['waktu-mulai'],
             'waktu_berakhir_acara' => $request['waktu-berakhir'],
             'lokasi_acara' => $request['lokasi'],
-            'alamat_acara' => $request['alamat']
+            'alamat_acara' => $request['alamat'],
+            'slug' => $slug
         ]);
 
         $udangan_ulangtahun = UndanganUlangTahun::create([
@@ -228,6 +232,9 @@ class OrderController extends Controller
             $harga = 2000000;
         }
 
+        $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+        $slug = substr(str_shuffle($permitted_chars), 0, 10);
+
         // dd($harga);
         $order = Order::create([
             'id_user' => $id_user,
@@ -244,7 +251,8 @@ class OrderController extends Controller
             'waktu_mulai_acara' => $request['waktu-mulai'],
             'waktu_berakhir_acara' => $request['waktu-berakhir'],
             'lokasi_acara' => $request['lokasi'],
-            'alamat_acara' => $request['alamat']
+            'alamat_acara' => $request['alamat'],
+            'slug' => $slug
         ]);
 
         $udangan_pernikahan = UndanganPernikahan::create([

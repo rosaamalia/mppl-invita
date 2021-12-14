@@ -6,6 +6,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\PublishController;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
@@ -81,3 +82,6 @@ Route::post('/akun', [AkunController::class, 'update']);
 Route::get('/order/bukutamu', [function () {
     return view('order.bukutamu');
 }])->name('bukutamu');
+
+Route::get('/pernikahan/{slug}', [PublishController::class, 'index_pernikahan'])->name('publish_pernikahan');
+Route::post('/tamu/pernikahan/{slug}', [PublishController::class, 'tamu_pernikahan']);
